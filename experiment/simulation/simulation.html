@@ -50,7 +50,7 @@ Author: Prakriti Dhang -->
         <hr>
     </div>
 
-    <div class="container-fluid mt-2 p-3">
+    <div class="container-fluid mt-2 p-4">
 		
         <div class="d-flex flex-column justify-content-center mb-3 ">  
             <div class="row">
@@ -73,7 +73,7 @@ Author: Prakriti Dhang -->
                   <div class="p-2 border-start" >
                     <div class="card-body">
                     <!--div class="main"-->
-                    <div  class="card card-body border border-1 border-info" id="p1">
+                    <div  class="card card-body border border-1 border-info" id="h1">
                      
                         <h5 id="head1" class="card-title fs-5 fw-bold border border-3 border-primary rounded-3 p-2" style="text-align: center; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">Identifying Domain Classes from the Problem Statements</h5>
                       </div>     
@@ -84,45 +84,189 @@ Author: Prakriti Dhang -->
                          
                           <div class="d-grid gap-2 d-md-flex  ">
                             <p class="fs-5 fw-bold " style="text-align:left">Step</p>
-                            <button type="button" class="btn border border-4 border-primary rounded-5 " style="background-color:#ccffff;" onclick="gostep1()">
+                            <button id="step0" type="button" class="btn border border-4 border-primary rounded-5 " style="display:block; background-color:#ccffff;" onclick="gostep1()">
                           <i class="fa-solid fa-square-1" >0</i></button>
-                          <button type="button" class="btn border border-4 border-primary rounded-5" style="background-color:#ccffff;" onclick="gostep2()">
+                          <button id="step1" type="button" class="btn border border-4 border-primary rounded-5" style="display:none; background-color:#ccffff;" onclick="gostep2()">
                             <i class="fa-solid fa-square-2" >1</i></button>
-                          <button type="button" class="btn border border-4 border-primary rounded-5" style="background-color:#ccffff; " onclick="gostep3()">
+                          <button id="step2" type="button" class="btn border border-4 border-primary rounded-5" style="display:none; background-color:#ccffff; " onclick="gostep3()">
                               <i class="fa-solid fa-square-3" >2</i></button>
-                          <button type="button" class="btn  border border-4 border-primary rounded-5" style="background-color:#ccffff;" onclick="gostep4()">
+                          <button id="step3" type="button" class="btn  border border-4 border-primary rounded-5" style="display:none; background-color:#ccffff;" onclick="gostep4()">
                                 <i class="fa-solid fa-square-4" >3</i></button>
-                          <button type="button" class="btn border border-4 border-primary rounded-5" style="background-color:#ccffff;" onclick="gostep5()">
+                          <button id="step4" type="button" class="btn border border-4 border-primary rounded-5" style="display:none; background-color:#ccffff;" onclick="gostep5()">
                                   <i class="fa-solid fa-square-5" >4</i></button>
                                 </div>
                         </div>
 
-                        <div id="p1" class=" card card-body border border-2 border-primary p-2 ">
-                          <p class="fs-5">We will follow the steps given below to identify <b>domain classes</b> from a given problem statement</p>
+                        <div id="p1" class=" card card-body border border-2 border-primary p-2" style="display:none;">
+                          <p class="fs-5" style="display:block;">We will follow the steps given below to identify <b>domain classes</b> from a given problem statement</p>
                         <ol class="fs-5 list-group-numbered">
-                          <li class="list-group-item">Mark the nouns and noun phrases -- this gives
+                          <li id="l1" class="list-group-item" style="display:none;">Mark the nouns and noun phrases -- this gives
                             a list of all potential objects.
                           </li>
-                          <li class="list-group-item"> Categorize the above discovered objects</li>
-                          <li class="list-group-item">Group the objects based on their common attributes</li>
-                          <li class="list-group-item">Give name to each such group -- they form the classes</li>
-                        </ol>
-
+                          <li id="l2" class="list-group-item" style="display:none;"> Categorize the above discovered objects</li>
+                          <li id="l3" class="list-group-item" style="display:none;">Group the objects based on their common attributes</li>
+                          <li id="l4" class="list-group-item" style="display:none;">Give name to each such group -- they form the classes</li>
+                          <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                          <button id="nextbtn1" type="button" class="btn btn-primary" onclick="gonextp2()" disabled style="display:block;">
+                            <i class="fas fa-chevron-right fa-lg"></i></button>
+                            </div>
                         </div>
 
-                        <div id="p2" class=" card card-body border border-2 border-primary p-2 ">
+                        <div id="p2" class=" card card-body border border-2 border-primary p-2 " style="display:none;">
                           
-                          <p class="fs-5" style="text-align: justify;">An automated teller machine (ATM) lets customers to withdraw cash anytime from 
-                          anywhere without requiring involvement of any banking clerk or representative. Customer must insert his ATM card 
-                          into he machine and authenticate himself by typing in his personal identification number (PIN). He cannot avail 
+                          <p class="fs-5" style="text-align: justify;">An <mark id="m1">automated teller machine</mark> (ATM) lets <mark id="m2">customers</mark> to withdraw <mark id="m3">cash</mark> anytime from 
+                          anywhere without requiring involvement of any <mark id="m4">banking clerk</mark> or <mark id="m5">representative</mark>. <mark id="m6">Customer</mark> must insert his <mark id="m7">ATM card</mark> 
+                          into he <mark id="m8">machine</mark> and authenticate himself by typing in his personal identification number (<mark id="m9">PIN</mark>). He cannot avail 
                           any of the facilities if the PIN entered is wrong. Authenticated customers can also change their PIN. 
-                          They can deposit cash to their account with the bank. Also they can transfer funds to any other account. 
-                          The ATM also provides options to the user to pay electricity or phone bill. Everyday morning the stock of cash 
-                          in the ATM machine is replenished by a representative from the bank. 
-                          Also, if the machine stops working, then it is fixed by a maintenance guy.</p>
-                       
+                          They can deposit cash to their <mark id="m10">account</mark> with the <mark id="m11">bank</mark>. Also they can transfer funds to any other account. 
+                          The ATM also provides options to the user to pay electricity or phone bill. <mark id="m12">Everyday</mark> <mark id="m13"> morning</mark> the stock of cash 
+                          in the ATM machine is replenished by a <mark id="m14">representative</mark> from the bank. 
+                          Also, if the machine stops working, then it is fixed by a <mark id="m15">maintenance guy</mark>.</p>
+                          <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                          <button id="backbtn2" type="button" class="btn btn-primary" onclick="goback1()" style="display:block;">
+                            <i class="fas fa-chevron-left fa-lg"></i></button>
+                            <button id="nextbtn2" type="button" class="btn btn-primary" onclick="gonextp3()" style="display:block;">
+                              <i class="fas fa-chevron-right fa-lg"></i></button>
+                              </div>
                         </div>
                         
+
+
+
+                        <div id="p3" class=" card card-body border border-2 border-primary p-2 " style="display:none;">
+                          <p class="fs-5" style="text-align: justify;">The classification into different categories will be made as per the list given by 
+                          Ross (see in theory section).
+                        </p>
+                        <div id="p31" style="display:none;">
+<p class="fs-5">  List of objects identified:</p>
+<ul class=" list-group px-3 list-group-horizontal-sm list-group-horizontal-md list-group-horizontal-lg  ">
+  <li class="li1 fs-5 list-group-item border border-1 rounded-3">Automated teller machine</li>
+  <li class="l2 fs-5 list-group-item border border-1 rounded-3">Customers</li>
+  <li class="l3 fs-5 list-group-item border border-1 rounded-3">Cash</li>
+  <li class="l4 fs-5 list-group-item border border-1 rounded-3">Banking</li>
+  </ul>
+  <ul class=" list-group px-3 list-group-horizontal-sm list-group-horizontal-md list-group-horizontal-lg ">
+  <li class="l5 fs-5 list-group-item border border-1 rounded-3">Representative</li>
+  <li class="l6 fs-5 list-group-item border border-1 rounded-3">ATM Card</li>
+  <li class="fs-5 list-group-item border border-1 rounded-3">Machine</li>
+  <li class="fs-5 list-group-item border border-1 rounded-3">PIN</li>
+  <li class="fs-5 list-group-item border border-1 rounded-3">Account</li>
+</ul>
+<ul class=" list-group px-3 list-group-horizontal-sm list-group-horizontal-md list-group-horizontal-lg ">
+ 
+  
+  <li class="fs-5 list-group-item border border-1 rounded-3">Bank</li>
+  <li class="fs-5 list-group-item border border-1 rounded-3">Everyday</li>
+  <li class="fs-5 list-group-item border border-1 rounded-3">Morning</li>
+  <li class="fs-5 list-group-item border border-1 rounded-3">Maintenance guy</li>
+</ul>
+</div>
+
+<div id="p32" style="display:block;">
+  <div class="row">
+    <div id="people" class="col-md-4" style="display:none;">
+     <p class="fs-4 fw-bold text-danger">People</p> 
+      <ul class="list-group border border-2 border-danger  text-bg-danger bg-opacity-50 p-2">
+        <li class="fs-5 list-group-item border border-0 rounded-3 bg-transparent">Customer</li>
+        <li class="fs-5 list-group-item border border-0 rounded-3 bg-transparent">Maintenance guy</li>
+        <li class="fs-5 list-group-item border border-0 rounded-3 bg-transparent">Representaive</li>
+        <li class="fs-5 list-group-item border border-0 rounded-3 bg-transparent">Banking clerk</li>
+      </ul>
+    </div>
+    <div id="things" class="col-md-4" style="display:none;"><p class="fs-4 fw-bold text-info">Things</p> 
+      <ul class="list-group border border-2 border-primary text-bg-info bg-opacity-50 p-2">
+        <li class="fs-5 list-group-item  border border-0 rounded-3 bg-transparent">Automated teller machine</li>
+        <li class="fs-5 list-group-item border border-0 rounded-3 bg-transparent">ATM card</li>
+        <li class="fs-5 list-group-item border border-0 rounded-3 bg-transparent">Machine</li>
+        <li class="fs-5 list-group-item border border-0 rounded-3 bg-transparent">Cash</li>
+      </ul>
+    </div>
+    <div id="org" class="col-md-4" style="display:none;"> <p class="fs-4 fw-bold text-warning">Organization</p> 
+      <ul class="list-group  border border-2 border-danger bg-warning bg-opacity-50 p-2">
+        <li class="fs-5 list-group-item border border-0 rounded-3 bg-transparent">Bank</li>
+       
+      </ul></div>
+  </div>
+  <br>
+  <div class="row">
+    <div id="evnt" class="col-md-4" style="display:none;"><p class="fs-4 fw-bold text-primary">Events</p> 
+      <ul class="list-group border border-2 border-success p-2 bg-success text-dark bg-opacity-50">
+        <li class="fs-5 list-group-item border border-0 rounded-3 bg-transparent">Everyday</li>
+        <li class="fs-5 list-group-item border border-0 rounded-3 bg-transparent">Morning</li>
+ 
+      </ul></div>
+    <div id="concpt" class="col-md-4" style="display:none;"><p class="fs-4 fw-bold text-success">Concepts</p> 
+      <ul class="list-group border border-1 border-primary bg-danger bg-opacity-25 p-2">
+        <li class="fs-5 list-group-item border border-0 rounded-3 bg-transparent">Account</li>
+        <li class="fs-5 list-group-item border border-0 rounded-3  bg-transparent">PIN</li>
+      
+      </ul></div>
+
+  </div>
+  <div id="identdobj" class="card card-body border border-1 border-primary" style="display:none;">
+    <p class="fs-5"> All the porential objects have been categorized.</p>
+  </div>
+</div>
+
+<div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+  <button id="backbtn3" type="button" class="btn btn-primary" onclick="goback2()" style="display:block;">
+    <i class="fas fa-chevron-left fa-lg"></i></button>
+    <button id="nextbtn3" type="button" class="btn btn-primary" onclick="gonextp4()" style="display:block;">
+      <i class="fas fa-chevron-right fa-lg"></i></button>
+      </div>
+
+                        </div>
+
+
+
+                        <div id="p4" class="card card-body border border-2 border-primary" style="display: none;">
+                          
+                          <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                            <button id="backbtn4" type="button" class="btn btn-primary" onclick="goback3()" style="display:block;">
+                              <i class="fas fa-chevron-left fa-lg"></i></button>
+                              <button id="nextbtn4" type="button" class="show btn btn-primary" onclick="gonextp5()" style="display:block;">
+                                <i class="fas fa-chevron-right fa-lg"></i></button>
+                                </div>
+                          </div>
+
+
+
+<div id="p5" class="card card-body border border-2 border-primary" style="display: block;">
+
+<div class="row">
+<div class="col-md-4">
+  <ol class="fs-5">
+    <li>Customer</li>
+    <li>Employee</li>
+    <li>ATM Machine</li>
+    <li>Machine</li>
+    <li>Cash</li>
+    <li>Bank</li>
+    <li>Account</li>
+    <li>PIN</li>
+    <li>Time</li>
+  </ol>
+</div>
+<div class="col-md-8" >
+<div class="card card border border-2 border-primary" style="display: block;"><p class="fs-5 p-2">These are the top level classesthat we identify from the given
+  problem statement.</p>
+</div>
+
+<div class="card card border border-2 border-primary" style="display: block;">
+  <p class="fs-5 p-2">Note that there are possibly some redundant classes. Also, no relations among
+    classes have been represented.
+  </p>
+</div>
+
+</div>
+</div>               
+<div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+  <button id="backbtn5" type="button" class="btn btn-primary" onclick="goback4()" style="display:block;">
+    <i class="fas fa-chevron-left fa-lg"></i></button>
+    
+      </div>       
+
+                    </div>    
                       </div>
                       <!--div class="row ">
                         <div class="col-md-2">
@@ -156,15 +300,14 @@ Author: Prakriti Dhang -->
 
 
 <!--/div-->
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-center border border-1 border-info" style="background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                    <div class="d-grid gap-2 p-2 d-md-flex justify-content-md-center border border-1 border-info" style="background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
                     
-                      <button type="button" class="btn btn-primary" onclick="replaybtn()" style="display:block;">
+                      <button type="button" class="btn btn-primary" onclick="replaybtn()" style="display:none;">
                         <i class="fas fa-redo"></i></button>
-                    <button type="button" class="btn btn-primary" onclick="goback()" style="display:block;">
-                      <i class="fas fa-chevron-left fa-lg"></i></button>
+                    
                     <button id="playbtn" type="button" class="btn btn-primary" onclick="playsimulation()"><i class="fas fa-play fa-sm "></i></button>
                     <!--i class="fa-solid fa-play"></i-->
-                    <button type="button" class="btn btn-primary " onclick="gonext()" style="display:block;"><i class="fas fa-chevron-right fa-lg"></i></button>
+                    
                
                   </div>
                 </div>
@@ -188,6 +331,7 @@ Author: Prakriti Dhang -->
 
 </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/simulation.js"></script>
 </body>
