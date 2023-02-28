@@ -150,8 +150,8 @@ function gonextp3(){
     document.getElementById("p3").style.display="block";
     document.getElementById("p31").style.display="block";
     document.getElementById("head1").innerHTML="Categorize the above identified objects";
-    document.getElementById("backbtn3").style.display="none";
-    document.getElementById("nextbtn3").style.display="none";
+    document.getElementById("backbtn3").disabled=true;
+    document.getElementById("nextbtn3").disabled=true;
     document.getElementById("nextbtn32").disabled=true;
     setTimeout(shwli1, 1000);
 
@@ -391,6 +391,8 @@ $('.show').click(function() {
     document.getElementById("p1").style.display="none";
     document.getElementById("p2").style.display="none";
     document.getElementById("p3").style.display="block";
+    document.getElementById("p31").style.display="block";
+    document.getElementById("p32").style.display="block";
     document.getElementById("backbtn3").style.display="block";
     document.getElementById("nextbtn3").style.display="block";
     document.getElementById("p4").style.display="none";
@@ -402,5 +404,7 @@ $('.show').click(function() {
     document.getElementById("p2").style.display="none";
     document.getElementById("p3").style.display="none";
     document.getElementById("p4").style.display="block";
+    document.getElementById("p4").style.display="block";
+    document.getElementById("p41").style.display="block";
     document.getElementById("p5").style.display="none";
   }
