@@ -146,10 +146,127 @@ function gonextp2(){
 
 function gonextp3(){
     document.getElementById("p2").style.display="none";
+    document.getElementById("step2").style.display="block";
     document.getElementById("p3").style.display="block";
     document.getElementById("p31").style.display="block";
     document.getElementById("head1").innerHTML="Categorize the above identified objects";
-    setTimeout(shwpeople, 3000);
+    document.getElementById("backbtn3").style.display="none";
+    document.getElementById("nextbtn3").style.display="none";
+    document.getElementById("nextbtn32").disabled=true;
+    setTimeout(shwli1, 1000);
+
+    function shwli1(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li1").style.display="block";
+       
+        setTimeout(shwli2, 1000);
+    }
+
+    function shwli2(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li2").style.display="block";
+       
+        setTimeout(shwli3, 1000);
+    }
+    function shwli3(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li3").style.display="block";
+       
+        setTimeout(shwli4, 1000);
+    }
+
+    function shwli4(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li4").style.display="block";
+       
+        setTimeout(shwli5, 1000);
+    }
+
+    function shwli5(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li5").style.display="block";
+       
+        setTimeout(shwli6, 1000);
+    }
+
+    function shwli6(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li6").style.display="block";
+       
+        setTimeout(shwli7, 1000);
+    }
+
+
+    function shwli7(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li7").style.display="block";
+       
+        setTimeout(shwli8, 1000);
+    }
+
+    function shwli8(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li8").style.display="block";
+       
+        setTimeout(shwli9, 1000);
+    }
+
+
+    function shwli9(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li9").style.display="block";
+       
+        setTimeout(shwli10, 1000);
+    }
+
+
+
+    function shwli10(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li10").style.display="block";
+       
+        setTimeout(shwli11, 1000);
+    }
+
+
+
+    function shwli11(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li11").style.display="block";
+       
+        setTimeout(shwli12, 1000);
+    }
+
+
+    function shwli12(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li12").style.display="block";
+       
+        setTimeout(shwli13, 1000);
+    }
+    function shwli13(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li13").style.display="block";
+        document.getElementById("nextbtn32").disabled=false;
+        
+       
+        
+    }
+
+
+
+
+
+
+}
+
+function gonextp32(){
+    document.getElementById("backbtn3").style.display="block";
+    document.getElementById("nextbtn3").style.display="block";
+    document.getElementById("backbtn3").disabled=true;
+    document.getElementById("nextbtn3").disabled=true;
+    document.getElementById("nextbtn32").style.display="none";
+    setTimeout(shwpeople, 100);
 
     function shwpeople(){
         document.getElementById("p31").style.display="none";
@@ -173,16 +290,61 @@ function gonextp3(){
     }
     function shwconcpt(){
         document.getElementById("concpt").style.display="block";
-        setTimeout(shwobj, 2000);
+        setTimeout(shwobj, 500);
         
     }
 
     function shwobj(){
         document.getElementById("identdobj").style.display="block";
+        document.getElementById("backbtn3").disabled=false;
+        document.getElementById("nextbtn3").disabled=false;
     }
 
 
 }
+
+function gonextp4(){
+    document.getElementById("step3").style.display="block";
+    document.getElementById("head1").innerHTML="Grouping of objects based on common attributes";
+    document.getElementById("p4").style.display="block";
+    document.getElementById("p41").style.display="block";
+    document.getElementById("p3").style.display="none";
+    document.getElementById("p31").style.display="none";
+    document.getElementById("p32").style.display="none";
+    document.getElementById("backbtn4").disabled=true;
+    document.getElementById("nextbtn4").disabled=true;
+}
+    
+    function gonextp42(){
+        document.getElementById("p41").style.display="none";
+        document.getElementById("p42").style.display="block";
+    
+    }
+
+    function gonextp43(){
+        document.getElementById("p42").style.display="none";
+        document.getElementById("p43").style.display="block";
+    
+    }
+    function gonextp44(){
+        document.getElementById("p43").style.display="none";
+        document.getElementById("p44").style.display="block";
+   
+    }
+    function gonextp45(){
+        document.getElementById("p44").style.display="none";
+        document.getElementById("p45").style.display="block";
+    setTimeout(shwdisblbtn, 1000);
+    
+
+    function shwdisblbtn(){
+    document.getElementById("backbtn4").disabled=false;
+    document.getElementById("nextbtn4").disabled=false;
+    }
+    }
+
+
+
 
 $('.show').click(function() {
     $('ol').toggleClass('show');
@@ -190,5 +352,55 @@ $('.show').click(function() {
 
 
   function gonextp5(){
-    
+    document.getElementById("head1").innerHTML="Generating classes from the groups";
+    document.getElementById("step4").style.display="block";
+    document.getElementById("p4").style.display="none";
+    document.getElementById("p5").style.display="block";
+    setTimeout(shwtplvl, 4500);
+
+
+    function shwtplvl(){
+    document.getElementById("toplevel").style.display="block";
+    setTimeout(shwnote, 2000);
+    }
+    function shwnote(){
+    document.getElementById("note").style.display="block";
+    }
+  }
+
+
+  function gobackp1(){
+    document.getElementById("p1").style.display="block";
+    document.getElementById("p2").style.display="none";
+    document.getElementById("p3").style.display="none";
+    document.getElementById("p4").style.display="none";
+    document.getElementById("p5").style.display="none";
+  }
+
+  function gobackp2(){
+    document.getElementById("p1").style.display="none";
+    document.getElementById("p2").style.display="block";
+    document.getElementById("backbtn2").disabled=false;
+    document.getElementById("nextbtn2").disabled=false;
+    document.getElementById("p3").style.display="none";
+    document.getElementById("p4").style.display="none";
+    document.getElementById("p5").style.display="none";
+  }
+
+  function gobackp3(){
+    document.getElementById("p1").style.display="none";
+    document.getElementById("p2").style.display="none";
+    document.getElementById("p3").style.display="block";
+    document.getElementById("backbtn3").style.display="block";
+    document.getElementById("nextbtn3").style.display="block";
+    document.getElementById("p4").style.display="none";
+    document.getElementById("p5").style.display="none";
+  }
+
+  function gobackp4(){
+    document.getElementById("p1").style.display="none";
+    document.getElementById("p2").style.display="none";
+    document.getElementById("p3").style.display="none";
+    document.getElementById("p4").style.display="block";
+    document.getElementById("p5").style.display="none";
   }
