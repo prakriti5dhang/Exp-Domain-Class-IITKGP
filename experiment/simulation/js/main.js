@@ -375,12 +375,13 @@ function addbtnt7(){
     }*/
 //var checkbox;
 var array = [];
+//var myString = array.toString().replaceAll(",", "<br>");
 var checkedvaluet7 = document.querySelectorAll('input[type="checkbox"]:checked');  
 for (var i = 0; i < checkedvaluet7.length; i++) {
   array.push(checkedvaluet7[i].value)
 }
 //alert(array);
-  
+
     // alert(checkt7value);
      
 /*************************************************Adding to table  8 *******************************************************/
@@ -428,11 +429,9 @@ td1t8.appendChild(tdval1);
 /******************************************************* Enter Top Level Class in table 10 ****************************************************8*/
 
 var t10tr = document.createElement('tr');
-t10tr.setAttribute("id","t10class1");
+
 document.getElementById('tbody10class').appendChild(t10tr);
 var td1t10 = document.createElement('td');
-td1t10.setAttribute("id","t10class");
-
 //td2.setAttribute("rowspan","4");
 var tdval10=document.createTextNode(inpt3);
 
