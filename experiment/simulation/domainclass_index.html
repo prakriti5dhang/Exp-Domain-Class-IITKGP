@@ -21,7 +21,7 @@ Author: Prakriti Dhang
    
 </head>
 <body>
-  <!--header id="header">
+  <header id="header">
     <div class="container-fluid p-3 ">
       <div class="card">
       <div class="row">
@@ -37,7 +37,7 @@ Author: Prakriti Dhang
       </div>
     </div>
     </div>
-  </header-->
+  </header>
  
   <div class="container-fluid p-2 ">
 <hr>
@@ -91,13 +91,13 @@ Author: Prakriti Dhang
  
 
 <p class="fw-bold">Learning Ojectives:</p>  
- <ol>
+ <ul>
 	<li>Identifying potential classes (and their attributes) from a given problem statement
 </li>
 <li>Use expert knowledge on the subject matter to identify other relevant classes
 </li>
 
- </ol>
+ </ul>
 <p style="text-align: justify;"><b>Limitations:</b> The workspace provided is constrained to solve the current problem only. 
   This is not a general user interface to solve any problem. 
   Moreover, the classes generated at the end are some rudimentary classes and not necessarily the only classes possible. 
@@ -266,7 +266,7 @@ Author: Prakriti Dhang
     </thead>
     <tbody>
       <tr>
-        <td><select id="selectobj" class="form-select float-center border border-1 border-primary" aria-label="Default select example" onchange="selecobj()">
+        <td><select id="selectobj" class="form-select float-center border border-1 border-primary" aria-label="Default select example" >
           
         </select></td>
         <td>
@@ -377,11 +377,8 @@ Author: Prakriti Dhang
   <th>Attribute</th>
   
 </thead>
-<tbody>
-  <tr>
-    <td></td>
-    <td></td>
-  </tr>
+<tbody id="tbodytbt6">
+ 
 </tbody>
 
 </table>
@@ -411,63 +408,63 @@ Author: Prakriti Dhang
             <ul id="t7attri">
               <li>
                 <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="attricheck" value="Address" id="tb4a1">
-                <label class="form-check-label" for="tb4a1">
+                <input class="form-check-input" type="checkbox" name="attricheck" value="Address" id="tb7a1">
+                <label class="form-check-label" for="tb7a1">
                   Address
                 </label>
               </div>
             </li>
             
               <li><div class="form-check">
-                <input class="form-check-input" type="checkbox" name="attricheck" value="Color" id="tb4a2">
-                <label class="form-check-label" for="tb4a2">
+                <input class="form-check-input" type="checkbox" name="attricheck" value="Color" id="tb7a2">
+                <label class="form-check-label" for="tb7a2">
                   Color
                 </label>
               </div></li>
               <li>
-                <div id="optiona1" class="form-check">
-                  <input class="form-check-input" type="checkbox" name="attricheck" value="Cost" id="tb4a3">
-                  <label class="form-check-label" for="tb4a3">
+                <div  class="form-check">
+                  <input class="form-check-input" type="checkbox" name="attricheck" value="Cost" id="tb7a3">
+                  <label class="form-check-label" for="tb7a3">
                     Cost
                   </label>
                 </div>
               </li>
               <li>
-                <div id="optiona1" class="form-check">
-                  <input class="form-check-input" type="checkbox" name="attricheck" value="Height" id="tb4a4">
-                  <label class="form-check-label" for="tb4a4">
+                <div  class="form-check">
+                  <input class="form-check-input" type="checkbox" name="attricheck" value="Height" id="tb7a4">
+                  <label class="form-check-label" for="tb7a4">
                     Height
                   </label>
                 </div>
               </li>
               <li>
-                <div id="optiona1" class="form-check">
-                  <input class="form-check-input" type="checkbox" name="attricheck" value="Name" id="tb4a5">
-                  <label class="form-check-label" for="tb4a5">
+                <div  class="form-check">
+                  <input class="form-check-input" type="checkbox" name="attricheck" value="Name" id="tb7a5">
+                  <label class="form-check-label" for="tb7a5">
                     Name
                   </label>
                 </div>
               </li>
               <li>
-                <div id="optiona1" class="form-check">
-                  <input class="form-check-input" type="checkbox" vname="attricheck" alue="Serial Number" id="tb4a6">
-                  <label class="form-check-label" for="tb4a6">
+                <div  class="form-check">
+                  <input class="form-check-input" type="checkbox" vname="attricheck" value="Serial Number" id="tb7a6">
+                  <label class="form-check-label" for="tb7a6">
                     Serial Number
                   </label>
                 </div>
               </li>
               <li>
-                <div id="optiona1" class="form-check">
-                  <input class="form-check-input" type="checkbox" name="attricheck" value="Time" id="tb4a7">
-                  <label class="form-check-label" for="tb4a7">
+                <div  class="form-check">
+                  <input class="form-check-input" type="checkbox" name="attricheck" value="Time" id="tb7a7">
+                  <label class="form-check-label" for="tb7a7">
                     Time
                   </label>
                 </div>
               </li>
               <li>
-                <div id="optiona1" class="form-check">
-                  <input class="form-check-input" type="checkbox" name="attricheck" value="Weight" id="tb4a8">
-                  <label class="form-check-label" for="tb4a8">
+                <div  class="form-check">
+                  <input class="form-check-input" type="checkbox" name="attricheck" value="Weight" id="tb7a8">
+                  <label class="form-check-label" for="tb7a8">
                     Weight
                   </label>
                 </div>
@@ -534,13 +531,11 @@ Author: Prakriti Dhang
     <table id="tbl10" class="table table-bordered  border border-1 border-info table-stripped">
       <thead>
         <th>Class</th>
-        <th>Objects</th>
+      
       </thead>
-      <tbody>
-        <tr>
-          <td id="t10class"></td>
-          <td id="t10obj"></td>
-        </tr>
+      <tbody id="tbody10class" style="display: none ;">
+       
+
       </tbody>
  
     </table>
@@ -878,15 +873,22 @@ Author: Prakriti Dhang
 </div>
 </div> <!-- Card body ended for result display-->
 </div> <!-- Card  ended for result display-->
-
-			
-			
+		
 </div> <!--- d-Flex ended-->
   </div> <!-- container-fluid ended-->
-
   
- 
+  <div class="container-fluid p-1">
+  <hr>
+  <footer class="text-white text-center ">
+    <div class="text-center text-primary fs-5 "  >
+      Copyright © 2023  IIT Kharagpur,
+      <a class="text-primary fs-5" href="http://vlabs.iitkgp.ac.in/">Virtual Lab</a>
+    </div>
+   
+    </footer>
   
+    <hr>
+  </div>
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

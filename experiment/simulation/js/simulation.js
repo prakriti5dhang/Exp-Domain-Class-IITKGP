@@ -124,16 +124,10 @@ function gonextp2(){
 
         const highlightxt = document.getElementById('m14');
         highlightxt.style.webkitAnimationPlayState = "running";
-        setTimeout(mark15, 3000);
-    }
-
-    function mark15(){
-
-        const highlightxt = document.getElementById('m15');
-        highlightxt.style.webkitAnimationPlayState = "running";
         setTimeout(nextp3, 3000);
-        
     }
+
+    
 
     function nextp3(){
         document.getElementById("backbtn2").disabled=false;
@@ -152,6 +146,8 @@ function gonextp3(){
     document.getElementById("head1").innerHTML="Categorize the above identified objects";
     document.getElementById("backbtn3").disabled=true;
     document.getElementById("nextbtn3").disabled=true;
+    document.getElementById("backbtn3").style.display="none";
+    document.getElementById("nextbtn3").style.display="none";
     document.getElementById("nextbtn32").disabled=true;
     setTimeout(shwli1, 1000);
 
@@ -254,10 +250,6 @@ function gonextp3(){
     }
 
 
-
-
-
-
 }
 
 function gonextp32(){
@@ -265,28 +257,30 @@ function gonextp32(){
     document.getElementById("nextbtn3").style.display="block";
     document.getElementById("backbtn3").disabled=true;
     document.getElementById("nextbtn3").disabled=true;
+    document.getElementById("nextbtn32").disabled=true;
     document.getElementById("nextbtn32").style.display="none";
+   
     setTimeout(shwpeople, 100);
 
     function shwpeople(){
         document.getElementById("p31").style.display="none";
         document.getElementById("p32").style.display="block";
         document.getElementById("people").style.display="block";
-        setTimeout(shwthngs, 3000);
+        setTimeout(shwthngs, 2000);
     }
 
     function shwthngs(){
         document.getElementById("things").style.display="block";
-        setTimeout(shworg, 3000);
+        setTimeout(shworg, 2000);
     }
     function shworg(){
         document.getElementById("org").style.display="block";
-        setTimeout(shwevnt, 3000);
+        setTimeout(shwevnt, 2000);
     }
 
     function shwevnt(){
         document.getElementById("evnt").style.display="block";
-        setTimeout(shwconcpt, 3000);
+        setTimeout(shwconcpt, 2000);
     }
     function shwconcpt(){
         document.getElementById("concpt").style.display="block";
@@ -355,6 +349,7 @@ $('.show').click(function() {
     document.getElementById("head1").innerHTML="Generating classes from the groups";
     document.getElementById("step4").style.display="block";
     document.getElementById("p4").style.display="none";
+    document.getElementById("p45").style.display="none";
     document.getElementById("p5").style.display="block";
     setTimeout(shwtplvl, 4500);
 
@@ -365,6 +360,8 @@ $('.show').click(function() {
     }
     function shwnote(){
     document.getElementById("note").style.display="block";
+    document.getElementById("replaybtn").style.display="block";
+    document.getElementById("replaybtn").disabled=false
     }
   }
 
@@ -375,6 +372,7 @@ $('.show').click(function() {
     document.getElementById("p3").style.display="none";
     document.getElementById("p4").style.display="none";
     document.getElementById("p5").style.display="none";
+    document.getElementById("head1").innerHTML="Identifying Domain Classes from the Problem Statements";
   }
 
   function gobackp2(){
@@ -385,6 +383,7 @@ $('.show').click(function() {
     document.getElementById("p3").style.display="none";
     document.getElementById("p4").style.display="none";
     document.getElementById("p5").style.display="none";
+    document.getElementById("head1").innerHTML="Identify the nouns and noum phrases";
   }
 
   function gobackp3(){
@@ -392,11 +391,128 @@ $('.show').click(function() {
     document.getElementById("p2").style.display="none";
     document.getElementById("p3").style.display="block";
     document.getElementById("p31").style.display="block";
-    document.getElementById("p32").style.display="block";
-    document.getElementById("backbtn3").style.display="block";
-    document.getElementById("nextbtn3").style.display="block";
+    document.getElementById("li2").style.display="none";
+    document.getElementById("li3").style.display="none";
+    document.getElementById("li4").style.display="none";
+    document.getElementById("li5").style.display="none";
+    document.getElementById("li6").style.display="none";
+    document.getElementById("li7").style.display="none";
+    document.getElementById("li8").style.display="none";
+    document.getElementById("li9").style.display="none";
+    document.getElementById("li10").style.display="none";
+    document.getElementById("li11").style.display="none";
+    document.getElementById("li12").style.display="none";
+    document.getElementById("li13").style.display="none";
+    document.getElementById("nextbtn32").disabled=true;
+    setTimeout(shwli1, 1000);
+
+    function shwli1(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li1").style.display="block";
+       
+        setTimeout(shwli2, 1000);
+    }
+
+    function shwli2(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li2").style.display="block";
+       
+        setTimeout(shwli3, 1000);
+    }
+    function shwli3(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li3").style.display="block";
+       
+        setTimeout(shwli4, 1000);
+    }
+
+    function shwli4(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li4").style.display="block";
+       
+        setTimeout(shwli5, 1000);
+    }
+
+    function shwli5(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li5").style.display="block";
+       
+        setTimeout(shwli6, 1000);
+    }
+
+    function shwli6(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li6").style.display="block";
+       
+        setTimeout(shwli7, 1000);
+    }
+
+
+    function shwli7(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li7").style.display="block";
+       
+        setTimeout(shwli8, 1000);
+    }
+
+    function shwli8(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li8").style.display="block";
+       
+        setTimeout(shwli9, 1000);
+    }
+
+
+    function shwli9(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li9").style.display="block";
+       
+        setTimeout(shwli10, 1000);
+    }
+
+
+
+    function shwli10(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li10").style.display="block";
+       
+        setTimeout(shwli11, 1000);
+    }
+
+
+
+    function shwli11(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li11").style.display="block";
+       
+        setTimeout(shwli12, 1000);
+    }
+
+
+    function shwli12(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li12").style.display="block";
+       
+        setTimeout(shwli13, 1000);
+    }
+    function shwli13(){
+        document.getElementById("p31").style.display="block";
+        document.getElementById("li13").style.display="block";
+        document.getElementById("nextbtn32").disabled=false;
+        
+       
+        
+    }
+    document.getElementById("p32").style.display="none";
+    document.getElementById("people").style.display="none";
+    document.getElementById("things").style.display="none";
+    document.getElementById("org").style.display="none";
+    document.getElementById("evnt").style.display="none";
+    document.getElementById("concpt").style.display="none";
+    document.getElementById("identdobj").style.display="none";
     document.getElementById("p4").style.display="none";
     document.getElementById("p5").style.display="none";
+    document.getElementById("head1").innerHTML="Categorize the above identified objects";
   }
 
   function gobackp4(){
@@ -406,5 +522,22 @@ $('.show').click(function() {
     document.getElementById("p4").style.display="block";
     document.getElementById("p4").style.display="block";
     document.getElementById("p41").style.display="block";
+    document.getElementById("p42").style.display="none";
+    document.getElementById("p43").style.display="none";
+    document.getElementById("p44").style.display="none";
+    document.getElementById("p45").style.display="none";
     document.getElementById("p5").style.display="none";
+    document.getElementById("head1").innerHTML="Grouping of objects based on common attributes";
+  }
+
+
+  function replaybtn(){
+    document.getElementById("playbtn").disabled=false;
+    document.getElementById("replaybtn").disabled=true;
+    document.getElementById("p1").style.display="none";
+    document.getElementById("p2").style.display="none";
+    document.getElementById("p3").style.display="none";
+    document.getElementById("p4").style.display="none";
+    document.getElementById("p5").style.display="none";
+ 
   }
