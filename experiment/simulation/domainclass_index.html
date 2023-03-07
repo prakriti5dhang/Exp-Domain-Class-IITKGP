@@ -115,14 +115,14 @@ Author: Prakriti Dhang
 
 	<!------------------------------------------Exercise 1 -------------------------------------------->
 
-<div class="card border border-2 border-success p-2" id="ex1" style="display:block;">
+<div class="card border border-2 border-success p-2" id="ex1" style="display:none;">
   <div class="card-body">
     <div class="row">
     <div class="col-md-9" >
 
       <!--------------------------------------------------------------- Table 1---------------------------------------------------------------->
       <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Table #1: Add nouns / noun phrases identified from the problem statement</label>
-      <form id="ftbl1"  class="p-2 bg-white " action="">
+      <form id="ftbl1"  class="p-1 bg-white " action="">
       <div class="table-responsive">
     <table id="tbl1" class="table table-bordered  border border-1 border-info table-stripped">
       <thead>
@@ -141,7 +141,7 @@ Author: Prakriti Dhang
 </form>
 <!------------------------------------------------------------Table 2-------------------------------------------------------------------------->
   <label for="table2" class="form-label fs-6" style=" font-weight: bold;">Table #2: Categorization of the above identified nouns (Ross's method)</label>
-  <form id="ftbl2"  class="p-2 bg-white " action="">
+  <form id="ftbl2"  class="p-1 bg-white " action="">
     <div class="table-responsive">
   <table id="tbl2" class="table column-bordered-table table-bordered border border-1 border-info ">
     <thead>
@@ -180,7 +180,7 @@ Author: Prakriti Dhang
 <!-------------------------------------------------------------- Table 3---------------------------------------------------------------------->
 
 <label for="table3" class="form-label fs-6" style=" font-weight: bold;">Table #3: List of categorized nouns (potential objects)</label>
-  <form id="ftbl3"  class="p-2 bg-white " action="">
+  <form id="ftbl3"  class="p-1 bg-white " action="">
     <div class="table-responsive">
   <table id="tbl3" class="table table-bordered  border border-1 border-info table-stripped">
     <thead>
@@ -254,7 +254,7 @@ Author: Prakriti Dhang
 <!----------------------------------------------------------------------- Table 4 ------------------------------------------------------------->
 
 <label for="table4" class="form-label fs-6" style=" font-weight: bold;">Table #4: Identify attribute(s) for objects</label>
-  <form id="ftbl4"  class="p-2 bg-white " action="">
+  <form id="ftbl4"  class="p-1 bg-white " action="">
     <div class="table-responsive">
   <table id="tbl4" class="table table-bordered  border border-1 border-info table-stripped">
     <thead>
@@ -350,7 +350,7 @@ Author: Prakriti Dhang
 
 <!---------------------------------------------------------------------- Table 5--------------------------------------------------------------->
 <label for="table5" class="form-label fs-6" style=" font-weight: bold;">Table #5: Add other possibile attribute(s) [Optional]</label>
-<form id="ftbl5"  class="p-2 bg-white " action="">
+<form id="ftbl5"  class="p-1 bg-white " action="">
 <div class="table-responsive">
 <table id="tbl5" class="table table-bordered  border border-1 border-info table-stripped">
 <thead>
@@ -369,7 +369,7 @@ Author: Prakriti Dhang
 </form>
 <!--------------------------------------------------------------------Table 6------------------------------------------------------------------>
 <label for="table6" class="form-label fs-6" style=" font-weight: bold;">Table #6: List of objects and it's attribute(s)</label>
-<form id="ftbl6"  class="p-2 bg-white px-4" action="">
+<form id="ftbl6"  class="p-1 bg-white px-4" action="">
 <div class="table-responsive">
 <table id="tbl6" class="table table-bordered  border border-1 border-info table-stripped">
 <thead>
@@ -389,7 +389,7 @@ Author: Prakriti Dhang
 <!-------------------------------------------------------------------- Table 7 ----------------------------------------------------------------->
 
 <label for="table7" class="form-label fs-6" style=" font-weight: bold;">Table #7: Define classes from list of attribute(s)</label>
-  <form id="ftbl7"  class="p-2 bg-white " action="">
+  <form id="ftbl7"  class="p-1 bg-white " action="">
     <div class="table-responsive">
   <table id="tbl7" class="table table-bordered  border border-1 border-info table-stripped">
     <thead>
@@ -486,7 +486,7 @@ Author: Prakriti Dhang
 
 <!--------------------------------------------------------------- Table 8---------------------------------------------------------------------->
 <label for="table8" class="form-label fs-6" style=" font-weight: bold;">Table #8: List of classes and their attribute(s)</label>
-<form id="ftbl8"  class="p-2 bg-white px-4" action="">
+<form id="ftbl8"  class="p-1 bg-white px-4" action="">
 <div class="table-responsive">
 <table id="tbl8" class="table table-bordered  border border-1 border-info table-stripped">
 <thead>
@@ -504,7 +504,7 @@ Author: Prakriti Dhang
 
 <!------------------------------------- Table 9---------------------------------->
 <label for="table9" class="form-label fs-6" style=" font-weight: bold;">Table #9: Add any other relevant class (based on domain knowledge) [Optional]</label>
-      <form id="ftbl9"  class="p-2 bg-white " action="">
+      <form id="ftbl9"  class="p-1 bg-white " action="">
       <div class="table-responsive">
     <table id="tbl9" class="table table-bordered  border border-1 border-info table-stripped">
       <thead>
@@ -526,7 +526,7 @@ Author: Prakriti Dhang
 <br>
 <!----------------------------------------------------------------- Table 10--------------------------------------------------------------->
 <label for="table10" class="form-label fs-6 p-2" style=" font-weight: bold;">Table #10: List of top level classes</label>
-      <form id="ftbl10"  class="p-2 bg-white " action="">
+      <form id="ftbl10"  class="p-1 bg-white " action="">
       <div class="table-responsive">
     <table id="tbl10" class="table table-bordered  border border-1 border-info table-stripped">
       <thead>
@@ -553,6 +553,7 @@ Author: Prakriti Dhang
 				<div class="card border border-2 border-warning p-2" id="dispres" style="display:none;">
   <div class="card-body">
 	<label for="result" class="form-label fs-4" style="color: brown; font-weight: bold;">Result</label>
+
    <div style="font-size: medium;" id="show_result" class="divscroll " style=" display: none;" >
     <p class="h6">From the given problem statement we can identify the following nouns and noun phrases:</p>
   <div class="table-responsive">
@@ -869,8 +870,9 @@ Author: Prakriti Dhang
 </ul>
 
 
- <button type="button" class="btn btn-info border-primary" id="viewsol" onclick="solview()" disabled>View Solution</button>
-</div>
+ 
+</div> <br>
+<button type="button" class="btn btn-info border-primary" id="viewsol" onclick="solview()" disabled>View Solution</button>
 </div> <!-- Card body ended for result display-->
 </div> <!-- Card  ended for result display-->
 		

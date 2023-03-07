@@ -10,8 +10,8 @@ function subex(){
     if(ex.options[ex.selectedIndex].value==1){
         document.getElementById("exercise1").style.display="block";
         document.getElementById("ex1").style.display="block";
-        document.getElementById("dispres").style.display="block";
-        document.getElementById("show_result").style.display="block";
+        document.getElementById("dispres").style.display="none";
+        document.getElementById("show_result").style.display="none";
         document.getElementById("dispviewbtn").disabled=false;
         document.getElementById("viewsol").disabled=true;
        
@@ -29,15 +29,15 @@ function subex(){
 }
 /* Submit button to directly view the solution*/
 
-function viewsolutionb(){
+function viewsolutionb(){ //submit button
+  document.getElementById("dispres").style.display="block";
+  document.getElementById("show_result").style.display="none";
     document.getElementById("viewsol").disabled=false;
     document.getElementById("dispviewbtn").disabled=true;
 }
 
-function solview(){
-
-
-    
+function solview(){  //view solution button
+  document.getElementById("show_result").style.display="block";
     document.getElementById("viewsol").disabled=true;
 }
  
