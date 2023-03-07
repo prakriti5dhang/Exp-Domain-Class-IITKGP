@@ -272,7 +272,22 @@ function addbtnt4(){
  
    document.getElementById('tbodytbt6').appendChild(ntr);
 
-}
+
+   /******************************************************* Adding object Top Level Class in table 10 ****************************************************8*/
+
+var t10tr = document.createElement('tr');
+
+document.getElementById('tbody10class').appendChild(t10tr);
+var td1t10 = document.createElement('td');
+//td2.setAttribute("rowspan","4");
+var tdval10=document.createTextNode(dobj);
+
+t10tr.appendChild(td1t10);
+td1t10.appendChild(tdval10); 
+document.getElementById('tbody10class').appendChild(t10tr);
+ }
+
+
 
 
 
@@ -426,7 +441,7 @@ td1t8.appendChild(tdval1);
 
 
 
-/******************************************************* Enter Top Level Class in table 10 ****************************************************8*/
+/******************************************************* Adding classes Top Level Class in table 10 ****************************************************8*/
 
 var t10tr = document.createElement('tr');
 
@@ -613,13 +628,13 @@ var ult8=document.createElement("ul");
 
 
 
-/*function removerowobj(btndel) {
+function removerowobj(btndel) {
   if (typeof(btndel) == "object") {
       $(btndel).closest("li").remove();
   } else {
       return false;
   }
-}*/
+}
 
 
 
