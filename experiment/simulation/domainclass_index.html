@@ -525,21 +525,46 @@ Author: Prakriti Dhang
 <button id="tlcbtn" class="btn btn-primary p-2" type="button" onclick="btntlc()" ><i class="bi bi-paint-bucket"></i>Top Level Classes</button>
 <br>
 <!----------------------------------------------------------------- Table 10--------------------------------------------------------------->
-<label for="table10" class="form-label fs-6 p-2" style=" font-weight: bold;">Table #10: List of top level classes</label>
-      <form id="ftbl10"  class="p-1 bg-white " action="">
-      <div class="table-responsive">
-    <table id="tbl10" class="table table-bordered  border border-1 border-info table-stripped">
-      <thead>
-        <th>Class</th>
-      <th>Object</th>
-      </thead>
-      <tbody id="tbody10class" style="display: none ;">
-       
+<label id="table10" for="table10" class="form-label fs-6 p-2" style=" font-weight: bold; display: none;" >Table #10: List of top level classes</label>
+      <form id="ftbl10"  class="p-1 bg-white   " style="display: none;">
+     
+        <div class="row">
+          <div class="col-md-4" >
+            <table id="tbl10c" class="table border border-1 border-info table-stripped" >
+             
+                 <tr class="text-white" style="background-color: #1536a1fa;"> 
+                      <th >Class</th>
+                  </tr>
+              
+              
+              <tbody id="tbody10class" style="background-color: aliceblue;">
+               
+        
+              </tbody>
+         
+            </table>
+            </div>
+            <div class="col-md-4" >
+              <table id="tbl10obj" class="table border border-1 border-info  table-stripped" >
+                <tr class="text-white" style="background-color: #1536a1fa;">
+                  
+                <th>Objects</th>
+                
+              
+                </tr>
+                <tbody id="tbody10obj" style="background-color: aliceblue;" >
+                 
+          
+                </tbody>
+           
+              </table>
+            </div>
+          
+        </div>
+    
 
-      </tbody>
- 
-    </table>
-   </div> <!-- table 9 responsive div ended for exercise 1-->
+    
+   
 </form>
 
     </div> <!-- column ended for exercise 1-->

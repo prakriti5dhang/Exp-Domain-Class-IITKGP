@@ -85,6 +85,7 @@ let newCheckBox = document.createElement("INPUT");
   document.getElementById('potobjlist').appendChild(newLi);
   document.getElementById("inp1").value="";
 
+  /*********************** Adding input value in table 4 *************************/
 
 let newOptionID;
 newOptionID = 'newOption_' + inpt1;
@@ -105,12 +106,12 @@ select.appendChild(newOption);
 
 }
 
-  /* Function for Table 2 */
+  /************************************ Function for Table 2 ********************************************/
  function addbtnt2() {
     
     var category= document.getElementById("selectcat");
-   var checkedvalue= document.querySelector('input[type=checkbox][name=categoryselect]:checked').value
-    alert(checkedvalue);
+   var checkedvalue= document.querySelector('input[type=checkbox][name=categoryselect]:checked').value;
+    //alert(checkedvalue);
 
     /*********************************************** Category-People*************************************************/ 
     if(((checkedvalue=="Mr Roy") || (checkedvalue=="boss")|| (checkedvalue=="son") || (checkedvalue=="Mr Bose") || (checkedvalue=="drives") || (checkedvalue=="passenger") || (checkedvalue=="persons") || (checkedvalue=="neighbour"))&& (category.options[category.selectedIndex].value==3) ){
@@ -125,7 +126,8 @@ select.appendChild(newOption);
         pnewLi.appendChild(newIconbtn);
         document.getElementById('peoplet3').appendChild(pnewLi);
           
-      
+        document.getElementById('ftbl2').reset();
+        //document.getElementById('newCheckBoxID').disabled=false;
         
         
     }
@@ -146,7 +148,7 @@ else if(((checkedvalue=="Kolkata") || (checkedvalue=="home")|| (checkedvalue=="o
         plnewLi.appendChild(newIconbtn);
           document.getElementById('placet3').appendChild(plnewLi);
           
-      
+          document.getElementById('ftbl2').reset(); 
       
         
     }
@@ -165,7 +167,7 @@ else if(((checkedvalue=="Cabs") || (checkedvalue=="AC")|| (checkedvalue=="bookin
           document.getElementById('thingst3').appendChild(tnewLi);
           
       
-       
+          document.getElementById('ftbl2').reset();
         
     }
    
@@ -182,7 +184,7 @@ else if(((checkedvalue=="agency") || (checkedvalue=="At your risk bank ")|| (che
         onewLi.appendChild(newIconbtn);
       document.getElementById('orgt3').appendChild(onewLi);
       
-  
+      document.getElementById('ftbl2').reset();
     
     
 }
@@ -201,7 +203,7 @@ else if(((checkedvalue=="service") || (checkedvalue=="payments")|| (checkedvalue
         cnewLi.appendChild(newIconbtn);
       document.getElementById('conceptt3').appendChild(cnewLi);
       
-  
+      document.getElementById('ftbl2').reset();
     
     
 }
@@ -220,7 +222,7 @@ else if(((checkedvalue=="morning") || (checkedvalue=="everyday")|| (checkedvalue
         enewLi.appendChild(newIconbtn);
       document.getElementById('eventt3').appendChild(enewLi);
       
-  
+      document.getElementById('ftbl2').reset();
     
 }
 else{
@@ -235,18 +237,21 @@ else{
 
 
 /********************************************************** Function for Table 4 *****************************************************************/
-
+ var arrobj=[];
+ var dobj;
 function addbtnt4(){
   var arrayt4=[];
     var objsel= document.getElementById("selectobj");
-    var dobj =objsel.options[objsel.selectedIndex].value;
-    alert(dobj);
+     dobj =objsel.options[objsel.selectedIndex].value;
+   // alert(dobj);
     var checkedvaluet4= document.querySelectorAll('input[type=checkbox][name=attriselect]:checked');
      //alert(checkedvaluet4);
     // var checkboxt4;
      for (var i = 0; i < checkedvaluet4.length; i++) {
   arrayt4.push(checkedvaluet4[i].value)
 }
+
+arrobj.push(dobj);
     /********************* Adding to table 6**********************/
    var ntr= document.createElement("tr");
    ntr.setAttribute("id","boss");
@@ -273,9 +278,33 @@ function addbtnt4(){
    document.getElementById('tbodytbt6').appendChild(ntr);
 
 
+   /********* Reset form */
+
+   document.getElementById("ftbl4").reset();
+
+   /*var table = document.getElementById("tbl10");
+  tabrowindex + 1;
+var row = table.insertRow(++tabrowindex);
+
+for (var VAL of arrobj) 
+{ let cell = row.insertCell(1); 
+  cell.innerHTML = VAL; 
+  
+}
+
+document.getElementById("tbody10class").appendChild(table);*/
+
+var table = document.getElementById("tbl10obj");
+  tabrowindex + 1;
+var row = table.insertRow(1);
+//for (var VAL of inpt3) 
+ let cell = row.insertCell(0); 
+  cell.innerHTML = dobj; 
+  //document.getElementById("tbody10obj").appendChild(t10tr);
+
    /******************************************************* Adding object Top Level Class in table 10 ****************************************************8*/
 
-var t10tr = document.createElement('tr');
+/*var t10tr = document.createElement('tr');
 
 document.getElementById('tbody10class').appendChild(t10tr);
 var td1t10 = document.createElement('td');
@@ -284,7 +313,11 @@ var tdval10=document.createTextNode(dobj);
 
 t10tr.appendChild(td1t10);
 td1t10.appendChild(tdval10); 
-document.getElementById('tbody10class').appendChild(t10tr);
+document.getElementById("tbody10class").appendChild(t10tr);*/
+
+
+
+
  }
 
 
@@ -378,6 +411,7 @@ let t7newCheckBox = document.createElement("INPUT");
 /********************************************************** Function for Table 7*****************************************************************/
 
 var inpt3;
+var arrclass=[];
 function addbtnt7(){
      inpt3 =document.getElementById("inp3").value;
     console.log(inpt3);
@@ -395,6 +429,7 @@ var checkedvaluet7 = document.querySelectorAll('input[type="checkbox"]:checked')
 for (var i = 0; i < checkedvaluet7.length; i++) {
   array.push(checkedvaluet7[i].value)
 }
+arrclass.push(inpt3);
 //alert(array);
 
     // alert(checkt7value);
@@ -437,13 +472,27 @@ td1t8.appendChild(tdval1);
   newIconbtn.setAttribute("style","cursor:pointer;");
   lit8.appendChild(newIconbtn);*/
   document.getElementById('tbodytbl8').appendChild(t8tr);
-  document.getElementById("inp3").value=" ";
+  //document.getElementById("inp3").value=" ";
 
+  document.getElementById("ftbl7").reset();
 
+  var table = document.getElementById("tbl10c");
+  tabrowindex + 1;
+var row = table.insertRow(1);
+//for (var VAL of inpt3) 
+ let cell0 = row.insertCell(0); 
+  cell0.innerHTML = inpt3; 
+  
+  
+ 
+
+//document.getElementById("tbody10class").appendChild(table);
+
+}
 
 /******************************************************* Adding classes Top Level Class in table 10 ****************************************************8*/
 
-var t10tr = document.createElement('tr');
+/*var t10tr = document.createElement('tr');
 
 document.getElementById('tbody10class').appendChild(t10tr);
 var td1t10 = document.createElement('td');
@@ -453,7 +502,7 @@ var tdval10=document.createTextNode(inpt3);
 t10tr.appendChild(td1t10);
 td1t10.appendChild(tdval10); 
 document.getElementById('tbody10class').appendChild(t10tr);
- }
+ }*/
  
 
  /*else if((inpt3=="Employee")|| (inpt3=="employee")){
@@ -689,26 +738,49 @@ let t9newCheckBox = document.createElement("INPUT");
  }
 
 /********************************************************** Function for Top Level Classes*****************************************************************/
-
+var tabrowindex=0;
+var rows,x;
+var arr=[];
+var dclass, dobjects, dobjsel;
 function btntlc(){
-    document.getElementById("tbody10class").style.display="block";
-    //document.getElementById("t10obj").innerHTML=inpt1;
+  document.getElementById("table10").style.display="block";
+  document.getElementById("ftbl10").style.display="block";
+  
+  /*var table = document.getElementById("tbl10");
+  tabrowindex + 1;
+var row = table.insertRow(++tabrowindex);
+for (var VAL of arrclass) 
+{ let cell = row.insertCell(0); 
+  cell.innerHTML = VAL; 
+  
+}
+for (var VAL of arrobj) 
+{ let cell = row.insertCell(1); 
+  cell.innerHTML = VAL; 
+  
 }
 
+document.getElementById("tbody10class").appendChild(table);*/
+    //document.getElementById("tbl10").style.display="block";
+    /*dclass= document.getElementById("inp3").value;
+    dobjsel= document.getElementById("selectobj");
+    var dobjects =dobjsel.options[dobjsel.selectedIndex].value;
+
+    var table10= document.getElementById('tbl10');
 
 
- /*var tabrowindex=0;
-    arr[0] =inpt1;
-    adtbl2= document.getElementById('tbl2');
+ 
+    arr[0] =dclass;
+    arr[1] =dobjects;
+    
     tabrowindex + 1;
    
 
-   var row = adtbl2.insertRow(++tabrowindex); // Row increment
-    for (var q = 0; q <1; ++q) {
+   var row = table10.insertRow(++tabrowindex); // Row increment
+    for (var q = 0; q <2; ++q) {
 
         var cell = row.insertCell(q);
         cell.innerHTML = arr[q];
-        //
+        
     }*/
-
-// //document.getElementById("tbl2").rows[1].cells[0].innerHTML = inpt1;
+  }
