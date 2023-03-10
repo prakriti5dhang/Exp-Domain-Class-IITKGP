@@ -34,7 +34,7 @@ function gonextp2(){
     document.getElementById("head1").innerHTML="Identify the nouns and noum phrases";
     document.getElementById("p2").style.display="block";
     document.getElementById("p1").style.display="none";
-    document.getElementById("backbtn2").disabled=true;
+   // document.getElementById("backbtn2").disabled=true;
     document.getElementById("nextbtn2").disabled=true;
     const highlightxt = document.getElementById('m1');
     highlightxt.style.webkitAnimationPlayState = "running";
@@ -130,7 +130,7 @@ function gonextp2(){
     
 
     function nextp3(){
-        document.getElementById("backbtn2").disabled=false;
+        //document.getElementById("backbtn2").disabled=false;
         document.getElementById("nextbtn2").disabled=false;
     }
     
@@ -144,9 +144,9 @@ function gonextp3(){
     document.getElementById("p3").style.display="block";
     document.getElementById("p31").style.display="block";
     document.getElementById("head1").innerHTML="Categorize the above identified objects";
-    document.getElementById("backbtn3").disabled=true;
+    //document.getElementById("backbtn3").disabled=true;
     document.getElementById("nextbtn3").disabled=true;
-    document.getElementById("backbtn3").style.display="none";
+   // document.getElementById("backbtn3").style.display="none";
     document.getElementById("nextbtn3").style.display="none";
     document.getElementById("nextbtn32").disabled=true;
     setTimeout(shwli1, 1000);
@@ -253,9 +253,9 @@ function gonextp3(){
 }
 
 function gonextp32(){
-    document.getElementById("backbtn3").style.display="block";
+   // document.getElementById("backbtn3").style.display="block";
     document.getElementById("nextbtn3").style.display="block";
-    document.getElementById("backbtn3").disabled=true;
+   // document.getElementById("backbtn3").disabled=true;
     document.getElementById("nextbtn3").disabled=true;
     document.getElementById("nextbtn32").disabled=true;
     document.getElementById("nextbtn32").style.display="none";
@@ -290,7 +290,7 @@ function gonextp32(){
 
     function shwobj(){
         document.getElementById("identdobj").style.display="block";
-        document.getElementById("backbtn3").disabled=false;
+      //  document.getElementById("backbtn3").disabled=false;
         document.getElementById("nextbtn3").disabled=false;
     }
 
@@ -305,7 +305,7 @@ function gonextp4(){
     document.getElementById("p3").style.display="none";
     document.getElementById("p31").style.display="none";
     document.getElementById("p32").style.display="none";
-    document.getElementById("backbtn4").disabled=true;
+    //document.getElementById("backbtn4").disabled=true;
     document.getElementById("nextbtn4").disabled=true;
 }
     
@@ -332,7 +332,7 @@ function gonextp4(){
     
 
     function shwdisblbtn(){
-    document.getElementById("backbtn4").disabled=false;
+   // document.getElementById("backbtn4").disabled=false;
     document.getElementById("nextbtn4").disabled=false;
     }
     }
@@ -366,7 +366,7 @@ $('.show').click(function() {
   }
 
 
-  function gobackp1(){
+ /* function gobackp1(){
     document.getElementById("p1").style.display="block";
     document.getElementById("p2").style.display="none";
     document.getElementById("p3").style.display="none";
@@ -528,16 +528,50 @@ $('.show').click(function() {
     document.getElementById("p45").style.display="none";
     document.getElementById("p5").style.display="none";
     document.getElementById("head1").innerHTML="Grouping of objects based on common attributes";
-  }
+  }*/
 
 
   function replaybtn(){
+    document.getElementById("head1").innerHTML="Identifying Domain Classes from the Problem Statements";
     document.getElementById("playbtn").disabled=false;
     document.getElementById("replaybtn").disabled=true;
-    document.getElementById("p1").style.display="none";
+    location.reload();
+   /* document.getElementById("p1").style.display="none";
     document.getElementById("p2").style.display="none";
     document.getElementById("p3").style.display="none";
+    document.getElementById("p31").style.display="none";
+    document.getElementById("li1").style.display="none";
+    document.getElementById("li2").style.display="none";
+    document.getElementById("li3").style.display="none";
+    document.getElementById("li4").style.display="none";
+    document.getElementById("li5").style.display="none";
+    document.getElementById("li6").style.display="none";
+    document.getElementById("li7").style.display="none";
+    document.getElementById("li8").style.display="none";
+    document.getElementById("li9").style.display="none";
+    document.getElementById("li10").style.display="none";
+    document.getElementById("li11").style.display="none";
+    document.getElementById("li12").style.display="none";
+    document.getElementById("li13").style.display="none";
+    document.getElementById("p32").style.display="none";
+    document.getElementById("people").style.display="none";
+    document.getElementById("things").style.display="none";
+    document.getElementById("org").style.display="none";
+    document.getElementById("evnt").style.display="none";
+    document.getElementById("concpt").style.display="none";
+    document.getElementById("identdobj").style.display="none";
     document.getElementById("p4").style.display="none";
+    document.getElementById("p41").style.display="none";
+    document.getElementById("p42").style.display="none";
+    document.getElementById("p43").style.display="none";
+    document.getElementById("p44").style.display="none";
+    document.getElementById("p45").style.display="none";
     document.getElementById("p5").style.display="none";
- 
+    document.getElementById("step0").style.display="block";
+    document.getElementById("step1").style.display="none";
+    document.getElementById("step2").style.display="none";
+    document.getElementById("step3").style.display="none";
+    document.getElementById("step4").style.display="none";
+   
+ */
   }
