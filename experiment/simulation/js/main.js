@@ -48,7 +48,7 @@ newCheckLabel.setAttribute('for', newCheckBoxID);
 let labelTextNode = document.createTextNode(inpt1);
 newCheckLabel.appendChild(labelTextNode);
 newLi.appendChild(newCheckLabel);*/
-
+var newulID;
 function addbtnt1(){
 inpt1=document.getElementById("inp1").value;
 
@@ -254,9 +254,11 @@ function addbtnt4(){
 arrobj.push(dobj);
     /********************* Adding to table 6**********************/
    var ntr= document.createElement("tr");
-   ntr.setAttribute("id","boss");
-   document.getElementById('tbodytbt6').appendChild(ntr);
+   ntr.setAttribute("id",dobj);
+   //document.getElementById('tbodytbt6').appendChild(ntr);
+   
    var td1=document.createElement("td");
+   
    var td2=document.createElement("td");
    var td1val=document.createTextNode(dobj);
    //var td2val=document.createTextNode(checkedvaluet4);
@@ -268,14 +270,24 @@ arrobj.push(dobj);
    
    ntr.appendChild(td1);
    ntr.appendChild(td2);
-
-   var ult8=document.createElement("ul");
- var lit8= document.createElement("li");
+   newulID=  "attri_" +dobj;
+  var ult8=document.createElement("ul");
+  ult8.setAttribute("id",newulID);
+ //var lit8= document.createElement("li");
  td2.appendChild(ult8);
- ult8.appendChild(lit8);
- lit8.append(arrayt4);
+ //ult8.appendChild(lit8);
+
+ arrayt4.forEach((item)=>{
+  var lit8= document.createElement("li");
+  lit8.innerText = item;
+  ult8.appendChild(lit8);
+})
+ //lit8.append(arrayt4);
  
-   document.getElementById('tbodytbt6').appendChild(ntr);
+  document.getElementById('tbodytbt6').appendChild(ntr);
+  //document.getElementById(dobj).appendChild(td1);
+   //document.getElementById(dobj).appendChild(ntr);
+   //document.getElementById('attri_'+dobj).appendChild(lit8);
 
 
    /********* Reset form */
@@ -294,12 +306,12 @@ for (var VAL of arrobj)
 
 document.getElementById("tbody10class").appendChild(table);*/
 
-var table = document.getElementById("tbl10obj");
+/*var table = document.getElementById("tbl10obj");
   tabrowindex + 1;
 var row = table.insertRow(1);
 //for (var VAL of inpt3) 
  let cell = row.insertCell(0); 
-  cell.innerHTML = dobj; 
+  cell.innerHTML = dobj; */
   //document.getElementById("tbody10obj").appendChild(t10tr);
 
    /******************************************************* Adding object Top Level Class in table 10 ****************************************************8*/
@@ -457,10 +469,16 @@ td1t8.appendChild(tdval1);
   td2t8.append(checkbox.value); 
  }*/
  var ult8=document.createElement("ul");
- var lit8= document.createElement("li");
+
  td2t8.appendChild(ult8);
- ult8.appendChild(lit8);
- lit8.append(array);
+
+ array.forEach((item)=>{
+  var lit8= document.createElement("li");
+  lit8.innerText = item;
+  ult8.appendChild(lit8);
+})
+ //ult8.appendChild(lit8);
+ //lit8.append(array);
  
 
  
