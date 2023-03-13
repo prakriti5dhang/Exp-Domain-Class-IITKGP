@@ -494,12 +494,12 @@ td1t8.appendChild(tdval1);
 
   document.getElementById("ftbl7").reset();
 
-  var table = document.getElementById("tbl10c");
+  /*var table = document.getElementById("tbl10c");
   tabrowindex + 1;
 var row = table.insertRow(1);
 //for (var VAL of inpt3) 
  let cell0 = row.insertCell(0); 
-  cell0.innerHTML = inpt3; 
+  cell0.innerHTML = inpt3; */
   
   
  
