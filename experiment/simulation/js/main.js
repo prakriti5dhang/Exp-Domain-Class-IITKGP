@@ -268,18 +268,26 @@ arrobj.push(dobj);
    td2.append(checkboxt4.value); 
  }*/
    
+ 
+ 
+
    ntr.appendChild(td1);
    ntr.appendChild(td2);
    newulID=  "attri_" +dobj;
   var ult8=document.createElement("ul");
   ult8.setAttribute("id",newulID);
  //var lit8= document.createElement("li");
- td2.appendChild(ult8);
+  td2.appendChild(ult8);
  //ult8.appendChild(lit8);
 
  arrayt4.forEach((item)=>{
+  var newIconbtn = document.createElement("img");
+ newIconbtn.setAttribute("src","./images/remove.png");
+ newIconbtn.setAttribute("onclick", "removerowobj(this)");
+ newIconbtn.setAttribute("style","cursor:pointer;");
   var lit8= document.createElement("li");
   lit8.innerText = item;
+  lit8.appendChild(newIconbtn);
   ult8.appendChild(lit8);
 })
  //lit8.append(arrayt4);
