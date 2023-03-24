@@ -80,28 +80,36 @@ let newCheckBox = document.createElement("INPUT");
   newdiv.appendChild(newIconbtn);
   if (inpt1 == "") {
     alert("Please Enter Noun/Noun Phrase Before Click Add Button");
-  } else {
+  } 
+  else if((inpt1 == "Mr. Bose")||(inpt1 == "Mr. Roy")||(inpt1 == "Cabs")||(inpt1 == "cabs")||(inpt1 == "cab")||(inpt1 == "boss")||(inpt1 == "agency")||(inpt1 == "drivers")||(inpt1 == "AC")||(inpt1 == "services")||(inpt1 == "Kolkata")||(inpt1 == "passenger")
+  ||(inpt1 == "booking receipt")||(inpt1 == "home")||(inpt1 == "office")||(inpt1 == "place")||(inpt1 == "landmark")||(inpt1 == "Payments")||(inpt1 == "cheque")||(inpt1 == "branch")||(inpt1 == "At Your Rish Bank")||(inpt1 == "finances")
+  ||(inpt1 == "business")||(inpt1 == "bank")||(inpt1 == "morning")||(inpt1 == "everyday")||(inpt1 == "son")||(inpt1 == "school")||(inpt1 == "persons")||(inpt1 == "locality")||(inpt1 == "plan")
+  ||(inpt1 == "Drop to school")||(inpt1 == "neighbour")) {
 
-  document.getElementById('potobjlist').appendChild(newLi);
-  document.getElementById("inp1").value="";
-
-  /*********************** Adding input value in table 4 *************************/
-
-let newOptionID;
-newOptionID = 'newOption_' + inpt1;
+    document.getElementById('potobjlist').appendChild(newLi);
+    document.getElementById("inp1").value="";
   
-let newOption = document.createElement('option');
-let optionText = document.createTextNode(inpt1);
-// set option text
-newOption.appendChild(optionText);
-// and option value
+    /*********************** Adding input value in table 4 *************************/
+  
+  let newOptionID;
+  newOptionID = 'newOption_' + inpt1;
+    
+  let newOption = document.createElement('option');
+  let optionText = document.createTextNode(inpt1);
+  // set option text
+  newOption.appendChild(optionText);
+  // and option value
+  
+  newOption.setAttribute("id", newOptionID);
+  newOption.setAttribute('value',inpt1);
+  let select = document.getElementById('selectobj'); 
+  select.appendChild(newOption);
+  }
+  else{
 
-newOption.setAttribute("id", newOptionID);
-newOption.setAttribute('value',inpt1);
-let select = document.getElementById('selectobj'); 
-select.appendChild(newOption);
+ 
 
-
+alert("Read the problem statement carefully and then insert noun or noun phrase 'exactly same' as in the problem statement");
 }
 
 }
@@ -114,7 +122,7 @@ select.appendChild(newOption);
     //alert(checkedvalue);
 
     /*********************************************** Category-People*************************************************/ 
-    if(((checkedvalue=="Mr Roy") || (checkedvalue=="boss")|| (checkedvalue=="son") || (checkedvalue=="Mr Bose") || (checkedvalue=="drives") || (checkedvalue=="passenger") || (checkedvalue=="persons") || (checkedvalue=="neighbour"))&& (category.options[category.selectedIndex].value==3) ){
+    if(((checkedvalue=="Mr. Roy") || (checkedvalue=="boss")|| (checkedvalue=="son") || (checkedvalue=="Mr. Bose") || (checkedvalue=="drivers") || (checkedvalue=="passenger") || (checkedvalue=="persons") || (checkedvalue=="neighbour"))&& (category.options[category.selectedIndex].value==3) ){
         let pnewLi = document.createElement("li");
         let liTextNodep = document.createTextNode(checkedvalue);
         pnewLi.appendChild(liTextNodep);
@@ -154,7 +162,7 @@ else if(((checkedvalue=="Kolkata") || (checkedvalue=="home")|| (checkedvalue=="o
     }
     
 /*********************************************** Category-Things*************************************************/ 
-else if(((checkedvalue=="Cabs") || (checkedvalue=="AC")|| (checkedvalue=="booking receipt") || (checkedvalue=="cheque")  )&& (category.options[category.selectedIndex].value==6) ){
+else if(((checkedvalue=="Cabs") || (checkedvalue=="cabs")||(checkedvalue=="cab")|| (checkedvalue=="AC")|| (checkedvalue=="booking receipt") || (checkedvalue=="cheque")  )&& (category.options[category.selectedIndex].value==6) ){
         let tnewLi = document.createElement("li");
         let tliTextNode = document.createTextNode(checkedvalue);
         tnewLi.appendChild(tliTextNode);
@@ -172,7 +180,7 @@ else if(((checkedvalue=="Cabs") || (checkedvalue=="AC")|| (checkedvalue=="bookin
     }
    
 /*********************************************** Category-Organization*************************************************/ 
-else if(((checkedvalue=="agency") || (checkedvalue=="At your risk bank ")|| (checkedvalue=="bank") || (checkedvalue=="school")  )&& (category.options[category.selectedIndex].value==2) ){
+else if(((checkedvalue=="agency") || (checkedvalue=="At Your Risk Bank ")|| (checkedvalue=="bank") || (checkedvalue=="school")  )&& (category.options[category.selectedIndex].value==2) ){
     let onewLi = document.createElement("li");
     let oliTextNode = document.createTextNode(checkedvalue);
     onewLi.appendChild(oliTextNode);
@@ -191,7 +199,7 @@ else if(((checkedvalue=="agency") || (checkedvalue=="At your risk bank ")|| (che
 
 
 /*********************************************** Category-Concept*************************************************/ 
-else if(((checkedvalue=="service") || (checkedvalue=="payments")|| (checkedvalue=="finances") || (checkedvalue=="business") || (checkedvalue=="plan")  )&& (category.options[category.selectedIndex].value==0) ){
+else if(((checkedvalue=="service") || (checkedvalue=="Payments")|| (checkedvalue=="finances") || (checkedvalue=="business") || (checkedvalue=="plan")  )&& (category.options[category.selectedIndex].value==0) ){
     let cnewLi = document.createElement("li");
     let cliTextNode = document.createTextNode(checkedvalue);
     cnewLi.appendChild(cliTextNode);
@@ -210,7 +218,7 @@ else if(((checkedvalue=="service") || (checkedvalue=="payments")|| (checkedvalue
 
 
 /*********************************************** Category-Event*************************************************/ 
-else if(((checkedvalue=="morning") || (checkedvalue=="everyday")|| (checkedvalue=="drop to school")  )&& (category.options[category.selectedIndex].value==1) ){
+else if(((checkedvalue=="morning") || (checkedvalue=="everyday")|| (checkedvalue=="Drop to school")  )&& (category.options[category.selectedIndex].value==1) ){
     let enewLi = document.createElement("li");
     let eliTextNode = document.createTextNode(checkedvalue);
     enewLi.appendChild(eliTextNode);
@@ -264,9 +272,7 @@ arrobj.push(dobj);
    //var td2val=document.createTextNode(checkedvaluet4);
 
    td1.appendChild(td1val);
-   /*for (checkboxt4 of checkedvaluet4) {  
-   td2.append(checkboxt4.value); 
- }*/
+  
    
  
  
@@ -279,7 +285,7 @@ arrobj.push(dobj);
  //var lit8= document.createElement("li");
   td2.appendChild(ult8);
  //ult8.appendChild(lit8);
-
+ document.getElementById('tbodytbt6').appendChild(ntr);
  arrayt4.forEach((item)=>{
   var newIconbtn = document.createElement("img");
  newIconbtn.setAttribute("src","./images/remove.png");
@@ -292,9 +298,13 @@ arrobj.push(dobj);
 })
  //lit8.append(arrayt4);
  
-  document.getElementById('tbodytbt6').appendChild(ntr);
+ 
+  document.getElementById(dobj).appendChild(td1);
+  document.getElementById('attri_'+dobj).appendChild(lit8);
+ 
+  //document.getElementById('tbodytbt6').appendChild(ntr);
   //document.getElementById(dobj).appendChild(td1);
-   //document.getElementById(dobj).appendChild(ntr);
+   //document.getElementById(dobj).appendChild(td1);
    //document.getElementById('attri_'+dobj).appendChild(lit8);
 
 
