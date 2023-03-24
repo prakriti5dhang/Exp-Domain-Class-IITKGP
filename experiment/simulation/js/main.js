@@ -81,10 +81,17 @@ let newCheckBox = document.createElement("INPUT");
   if (inpt1 == "") {
     alert("Please Enter Noun/Noun Phrase Before Click Add Button");
   } 
+
+  /*if (!inpt1.match(/^[a-zA-Z]+$/) )
+
+    {
+        alert("Give alphabates and whitespace only");
+    }*/
   else if((inpt1 == "Mr. Bose")||(inpt1 == "Mr. Roy")||(inpt1 == "Cabs")||(inpt1 == "cabs")||(inpt1 == "cab")||(inpt1 == "boss")||(inpt1 == "agency")||(inpt1 == "drivers")||(inpt1 == "AC")||(inpt1 == "services")||(inpt1 == "Kolkata")||(inpt1 == "passenger")
   ||(inpt1 == "booking receipt")||(inpt1 == "home")||(inpt1 == "office")||(inpt1 == "place")||(inpt1 == "landmark")||(inpt1 == "Payments")||(inpt1 == "cheque")||(inpt1 == "branch")||(inpt1 == "At Your Rish Bank")||(inpt1 == "finances")
   ||(inpt1 == "business")||(inpt1 == "bank")||(inpt1 == "morning")||(inpt1 == "everyday")||(inpt1 == "son")||(inpt1 == "school")||(inpt1 == "persons")||(inpt1 == "locality")||(inpt1 == "plan")
-  ||(inpt1 == "Drop to school")||(inpt1 == "neighbour")) {
+  ||(inpt1 == "Drop to school")||(inpt1 == "neighbour")) 
+  {
 
     document.getElementById('potobjlist').appendChild(newLi);
     document.getElementById("inp1").value="";
@@ -105,7 +112,7 @@ let newCheckBox = document.createElement("INPUT");
   let select = document.getElementById('selectobj'); 
   select.appendChild(newOption);
   }
-  else{
+else{
 
  
 
@@ -261,6 +268,14 @@ function addbtnt4(){
 
 arrobj.push(dobj);
     /********************* Adding to table 6**********************/
+
+    if (checkedvaluet4.length === 0) {
+  
+      alert("You have to select at least one attribute from the list.");
+    } 
+    else{
+
+    
    var ntr= document.createElement("tr");
    ntr.setAttribute("id",dobj);
    //document.getElementById('tbodytbt6').appendChild(ntr);
@@ -274,9 +289,6 @@ arrobj.push(dobj);
    td1.appendChild(td1val);
   
    
- 
- 
-
    ntr.appendChild(td1);
    ntr.appendChild(td2);
    newulID=  "attri_" +dobj;
@@ -285,7 +297,7 @@ arrobj.push(dobj);
  //var lit8= document.createElement("li");
   td2.appendChild(ult8);
  //ult8.appendChild(lit8);
- document.getElementById('tbodytbt6').appendChild(ntr);
+ //document.getElementById('tbodytbt6').appendChild(ntr);
  arrayt4.forEach((item)=>{
   var newIconbtn = document.createElement("img");
  newIconbtn.setAttribute("src","./images/remove.png");
@@ -296,13 +308,13 @@ arrobj.push(dobj);
   lit8.appendChild(newIconbtn);
   ult8.appendChild(lit8);
 })
- //lit8.append(arrayt4);
  
+ document.getElementById('tbodytbt6').appendChild(ntr);
  
-  document.getElementById(dobj).appendChild(td1);
-  document.getElementById('attri_'+dobj).appendChild(lit8);
+ // document.getElementById(dobj).appendChild(td1);
+  //document.getElementById('attri_'+dobj).appendChild(lit8);
  
-  //document.getElementById('tbodytbt6').appendChild(ntr);
+  
   //document.getElementById(dobj).appendChild(td1);
    //document.getElementById(dobj).appendChild(td1);
    //document.getElementById('attri_'+dobj).appendChild(lit8);
@@ -311,47 +323,9 @@ arrobj.push(dobj);
    /********* Reset form */
 
    document.getElementById("ftbl4").reset();
-
-   /*var table = document.getElementById("tbl10");
-  tabrowindex + 1;
-var row = table.insertRow(++tabrowindex);
-
-for (var VAL of arrobj) 
-{ let cell = row.insertCell(1); 
-  cell.innerHTML = VAL; 
-  
-}
-
-document.getElementById("tbody10class").appendChild(table);*/
-
-/*var table = document.getElementById("tbl10obj");
-  tabrowindex + 1;
-var row = table.insertRow(1);
-//for (var VAL of inpt3) 
- let cell = row.insertCell(0); 
-  cell.innerHTML = dobj; */
-  //document.getElementById("tbody10obj").appendChild(t10tr);
-
-   /******************************************************* Adding object Top Level Class in table 10 ****************************************************8*/
-
-/*var t10tr = document.createElement('tr');
-
-document.getElementById('tbody10class').appendChild(t10tr);
-var td1t10 = document.createElement('td');
-//td2.setAttribute("rowspan","4");
-var tdval10=document.createTextNode(dobj);
-
-t10tr.appendChild(td1t10);
-td1t10.appendChild(tdval10); 
-document.getElementById("tbody10class").appendChild(t10tr);*/
-
-
-
-
- }
-
-
-
+    }
+  }
+   
 
 
 
@@ -428,7 +402,7 @@ let t7newCheckBox = document.createElement("INPUT");
         t7newdiv.appendChild(newIconbtn);
 
   if (inpt2 == "") {
-    alert("Please Enter Noun/Noun Phrase Before Click Add Button");
+    alert("Please possibile attributes before clicking add button");
   } else {
 
     document.getElementById('addattrit4').appendChild(t4newLi);
@@ -444,7 +418,9 @@ var inpt3;
 var arrclass=[];
 function addbtnt7(){
      inpt3 =document.getElementById("inp3").value;
-    console.log(inpt3);
+     
+    
+     
      //var checkedvaluet7= document.querySelector('input[type=checkbox][name=attricheck]:checked').value;
      /*var checkedvaluet7 = document.getElementsByName("attricheck");
      for (var checkbox of checkedvaluet7) {
@@ -467,7 +443,24 @@ arrclass.push(inpt3);
 /*************************************************Adding to table  8 *******************************************************/
 
 //if((inpt3=="person") || (inpt3=="Person")){ // == "Name") &&(checkbox.value == "Address")&&(checkbox.value == "Height")&&(checkbox.value == "Weight"))){
-  var t8tr = document.createElement('tr');
+  //for (let i = 0; i < attricheckbox7.length; i++) {
+   // if(((checkedvaluet7.value).checked)==false){
+     // alert("You have to select at least one attribute from the list.");
+  //}
+// }
+
+ 
+
+if(inpt3==""){
+alert("Input field cannot be blank. Give a valid classname.")
+ } 
+else if (checkedvaluet7.length === 0) {
+  
+  alert("You have to select at least one attribute from the list.");
+} 
+  
+ else{
+ var t8tr = document.createElement('tr');
   t8tr.setAttribute("id","t8class1");
   document.getElementById('tbodytbl8').appendChild(t8tr);
   var td1t8 = document.createElement('td');
@@ -491,15 +484,21 @@ td1t8.appendChild(tdval1);
  td2t8.appendChild(ult8);
 
  array.forEach((item)=>{
+  var newIconbtn = document.createElement("img");
+ newIconbtn.setAttribute("src","./images/remove.png");
+ newIconbtn.setAttribute("onclick", "removerowobj(this)");
+ newIconbtn.setAttribute("style","cursor:pointer;");
   var lit8= document.createElement("li");
   lit8.innerText = item;
+  lit8.appendChild(newIconbtn);
   ult8.appendChild(lit8);
 })
  //ult8.appendChild(lit8);
  //lit8.append(array);
  
-
- 
+ document.getElementById('tbodytbl8').appendChild(t8tr);
+ document.getElementById("ftbl7").reset();
+}
   
 
   /*var newIconbtn = document.createElement("img");
@@ -507,11 +506,11 @@ td1t8.appendChild(tdval1);
   newIconbtn.setAttribute("onclick", "removerowobj(this)");
   newIconbtn.setAttribute("style","cursor:pointer;");
   lit8.appendChild(newIconbtn);*/
-  document.getElementById('tbodytbl8').appendChild(t8tr);
+  
   //document.getElementById("inp3").value=" ";
 
-  document.getElementById("ftbl7").reset();
-
+  
+}
   /*var table = document.getElementById("tbl10c");
   tabrowindex + 1;
 var row = table.insertRow(1);
@@ -524,7 +523,6 @@ var row = table.insertRow(1);
 
 //document.getElementById("tbody10class").appendChild(table);
 
-}
 
 /******************************************************* Adding classes Top Level Class in table 10 ****************************************************8*/
 
