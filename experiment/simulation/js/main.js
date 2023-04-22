@@ -10,6 +10,7 @@ function subex(){
     if(ex.options[ex.selectedIndex].value==1){
         document.getElementById("exercise1").style.display="block";
         document.getElementById("ex1").style.display="block";
+        document.getElementById("para1").style.display="block";
         document.getElementById("dispres").style.display="none";
         document.getElementById("show_result").style.display="none";
         document.getElementById("dispviewbtn").disabled=false;
@@ -20,6 +21,7 @@ function subex(){
     if(ex.options[ex.selectedIndex].value==0){
         document.getElementById("exercise1").style.display="none";
         document.getElementById("ex1").style.display="none";
+        document.getElementById("para1").style.display="none";
         document.getElementById("dispres").style.display="none";
         document.getElementById("show_result").style.display="none";
         document.getElementById("dispviewbtn").disabled=true;
