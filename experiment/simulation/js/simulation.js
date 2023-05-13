@@ -31,7 +31,7 @@ function playsimulation(){
 
 function gonextp2(){
     document.getElementById("step1").style.display="block";
-    document.getElementById("head1").innerHTML="Identify the nouns and noum phrases";
+    document.getElementById("head1").innerHTML="1. Identify the nouns and noum phrases";
     document.getElementById("p2").style.display="block";
     document.getElementById("p1").style.display="none";
    // document.getElementById("backbtn2").disabled=true;
@@ -143,7 +143,7 @@ function gonextp3(){
     document.getElementById("step2").style.display="block";
     document.getElementById("p3").style.display="block";
     document.getElementById("p31").style.display="block";
-    document.getElementById("head1").innerHTML="Categorize the above identified objects";
+    document.getElementById("head1").innerHTML="2. Categorize the above identified objects";
     //document.getElementById("backbtn3").disabled=true;
     document.getElementById("nextbtn3").disabled=true;
    // document.getElementById("backbtn3").style.display="none";
@@ -299,7 +299,7 @@ function gonextp32(){
 
 function gonextp4(){
     document.getElementById("step3").style.display="block";
-    document.getElementById("head1").innerHTML="Grouping of objects based on common attributes";
+    document.getElementById("head1").innerHTML="3. Grouping of objects based on common attributes";
     document.getElementById("p4").style.display="block";
     document.getElementById("p41").style.display="block";
     document.getElementById("p3").style.display="none";
@@ -346,7 +346,7 @@ $('.show').click(function() {
 
 
   function gonextp5(){
-    document.getElementById("head1").innerHTML="Generating classes from the groups";
+    document.getElementById("head1").innerHTML="4. Generating classes from the groups";
     document.getElementById("step4").style.display="block";
     document.getElementById("p4").style.display="none";
     document.getElementById("p45").style.display="none";
