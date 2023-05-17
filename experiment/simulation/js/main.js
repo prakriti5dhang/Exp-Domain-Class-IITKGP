@@ -36,7 +36,7 @@ function viewsolutionb(){ //submit button
   document.getElementById("show_result").style.display="none";
     document.getElementById("viewsol").disabled=false;
     document.getElementById("dispviewbtn").disabled=true;
-    window.scrollBy(0, 2500);
+    window.scrollBy(0, 3500);
 }
 
 function solview(){  //view solution button
