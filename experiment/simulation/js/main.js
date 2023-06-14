@@ -56,6 +56,7 @@ function addbtnt1(){
 inpt1=document.getElementById("inp1").value;
 
 newLi = document.createElement("li");
+newLi.setAttribute("data-value", inpt1);
 newdiv = document.createElement("div");
 newdiv.setAttribute("class", "form-check");
 newCheckBoxID = 'checkbox_' + inpt1;
@@ -716,7 +717,14 @@ var ult8=document.createElement("ul");
 
 function removerowobj(btndel) {
   if (typeof(btndel) == "object") {
+     
+      var listItemValue = $(btndel).closest("li").data("value");
+      //console.log(listItemValue);
       $(btndel).closest("li").remove();
+      $("#selectobj").find('option[value="' + listItemValue + '"]').remove();
+     
+     
+
   } else {
       return false;
   }
