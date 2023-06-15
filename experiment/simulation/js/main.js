@@ -91,10 +91,12 @@ let newCheckBox = document.createElement("INPUT");
     {
         alert("Give alphabates and whitespace only");
     }*/
-  else if((inpt1 == "Mr. Bose")||(inpt1 == "Mr. Roy")||(inpt1 == "Cabs")||(inpt1 == "cabs")||(inpt1 == "cab")||(inpt1 == "boss")||(inpt1 == "agency")||(inpt1 == "drivers")||(inpt1 == "AC")||(inpt1 == "services")||(inpt1 == "Kolkata")||(inpt1 == "passenger")
+  else 
+  /*((inpt1 == "Mr. Bose")||(inpt1 == "Mr. Roy"))
+  ||(inpt1 == "Cabs")||(inpt1 == "cabs")||(inpt1 == "cab")||(inpt1 == "boss")||(inpt1 == "agency")||(inpt1 == "drivers")||(inpt1 == "AC")||(inpt1 == "services")||(inpt1 == "Kolkata")||(inpt1 == "passenger")
   ||(inpt1 == "booking receipt")||(inpt1 == "home")||(inpt1 == "office")||(inpt1 == "place")||(inpt1 == "landmark")||(inpt1 == "Payments")||(inpt1 == "cheque")||(inpt1 == "branch")||(inpt1 == "At Your Rish Bank")||(inpt1 == "finances")
   ||(inpt1 == "business")||(inpt1 == "bank")||(inpt1 == "morning")||(inpt1 == "everyday")||(inpt1 == "son")||(inpt1 == "school")||(inpt1 == "persons")||(inpt1 == "locality")||(inpt1 == "plan")
-  ||(inpt1 == "Drop to school")||(inpt1 == "neighbour")) 
+  ||(inpt1 == "Drop to school")||(inpt1 == "neighbour")) */
   {
 
     document.getElementById('potobjlist').appendChild(newLi);
@@ -116,12 +118,12 @@ let newCheckBox = document.createElement("INPUT");
   let select = document.getElementById('selectobj'); 
   select.appendChild(newOption);
   }
-else{
+//else{
 
  
 
-alert("Read the problem statement carefully and then insert noun or noun phrase 'exactly same' as in the problem statement");
-}
+//alert("Read the problem statement carefully and then insert noun or noun phrase 'exactly same' as in the problem statement");
+//}
 
 }
 
@@ -133,7 +135,7 @@ alert("Read the problem statement carefully and then insert noun or noun phrase 
     //alert(checkedvalue);
 
     /*********************************************** Category-People*************************************************/ 
-    if(((checkedvalue=="Mr. Roy") || (checkedvalue=="boss")|| (checkedvalue=="son") || (checkedvalue=="Mr. Bose") || (checkedvalue=="drivers") || (checkedvalue=="passenger") || (checkedvalue=="persons") || (checkedvalue=="neighbour"))&& (category.options[category.selectedIndex].value==3) ){
+    if(((checkedvalue.toLowerCase().replace(/\./g, '')=="Mr. Roy".toLowerCase().replace(/\./g, '')) || (checkedvalue.toLowerCase()=="boss")|| (checkedvalue.toLowerCase()=="son") || (checkedvalue.toLowerCase().replace(/\./g, '')=="Mr. Bose".toLowerCase().replace(/\./g, '')) || (checkedvalue.toLowerCase()=="drivers") || (checkedvalue.toLowerCase()=="passenger") || (checkedvalue.toLowerCase()=="persons") || (checkedvalue.toLowerCase()=="neighbour"))&& (category.options[category.selectedIndex].value==3) ){
         let pnewLi = document.createElement("li");
         let liTextNodep = document.createTextNode(checkedvalue);
         pnewLi.appendChild(liTextNodep);
@@ -155,7 +157,7 @@ alert("Read the problem statement carefully and then insert noun or noun phrase 
 
     /*********************************************** Category-Place*************************************************/ 
 
-else if(((checkedvalue=="Kolkata") || (checkedvalue=="home")|| (checkedvalue=="office") || (checkedvalue=="place") || (checkedvalue=="landmark") || (checkedvalue=="branch")|| (checkedvalue=="locality") )&& (category.options[category.selectedIndex].value==4) ){
+else if(((checkedvalue.toLowerCase()=="kolkata") || (checkedvalue.toLowerCase()=="home")|| (checkedvalue.toLowerCase()=="office") || (checkedvalue.toLowerCase()=="place") || (checkedvalue.toLowerCase()=="landmark") || (checkedvalue.toLowerCase()=="branch")|| (checkedvalue.toLowerCase()=="locality") )&& (category.options[category.selectedIndex].value==4) ){
         let plnewLi = document.createElement("li");
         let plliTextNode = document.createTextNode(checkedvalue);
         plnewLi.appendChild(plliTextNode);
@@ -173,7 +175,7 @@ else if(((checkedvalue=="Kolkata") || (checkedvalue=="home")|| (checkedvalue=="o
     }
     
 /*********************************************** Category-Things*************************************************/ 
-else if(((checkedvalue=="Cabs") || (checkedvalue=="cabs")||(checkedvalue=="cab")|| (checkedvalue=="AC")|| (checkedvalue=="booking receipt") || (checkedvalue=="cheque")  )&& (category.options[category.selectedIndex].value==6) ){
+else if(((checkedvalue.toLowerCase()=="cabs") || (checkedvalue.toLowerCase()=="AC".toLowerCase())|| (checkedvalue.toLowerCase()=="booking receipt") || (checkedvalue.toLowerCase()=="cheque")  )&& (category.options[category.selectedIndex].value==6) ){
         let tnewLi = document.createElement("li");
         let tliTextNode = document.createTextNode(checkedvalue);
         tnewLi.appendChild(tliTextNode);
@@ -191,7 +193,7 @@ else if(((checkedvalue=="Cabs") || (checkedvalue=="cabs")||(checkedvalue=="cab")
     }
    
 /*********************************************** Category-Organization*************************************************/ 
-else if(((checkedvalue=="agency") || (checkedvalue=="At Your Risk Bank ")|| (checkedvalue=="bank") || (checkedvalue=="school")  )&& (category.options[category.selectedIndex].value==2) ){
+else if(((checkedvalue.toLowerCase()=="agency") || (checkedvalue.toLowerCase()=="At Your Risk Bank".toLowerCase())|| (checkedvalue.toLowerCase()=="bank") || (checkedvalue.toLowerCase()=="school")  )&& (category.options[category.selectedIndex].value==2) ){
     let onewLi = document.createElement("li");
     let oliTextNode = document.createTextNode(checkedvalue);
     onewLi.appendChild(oliTextNode);
@@ -210,7 +212,7 @@ else if(((checkedvalue=="agency") || (checkedvalue=="At Your Risk Bank ")|| (che
 
 
 /*********************************************** Category-Concept*************************************************/ 
-else if(((checkedvalue=="service") || (checkedvalue=="Payments")|| (checkedvalue=="finances") || (checkedvalue=="business") || (checkedvalue=="plan")  )&& (category.options[category.selectedIndex].value==0) ){
+else if(((checkedvalue.toLowerCase()=="service") || (checkedvalue.toLowerCase()=="payments")|| (checkedvalue.toLowerCase()=="finances") || (checkedvalue.toLowerCase()=="business") || (checkedvalue.toLowerCase()=="plan")  )&& (category.options[category.selectedIndex].value==0) ){
     let cnewLi = document.createElement("li");
     let cliTextNode = document.createTextNode(checkedvalue);
     cnewLi.appendChild(cliTextNode);
@@ -229,7 +231,7 @@ else if(((checkedvalue=="service") || (checkedvalue=="Payments")|| (checkedvalue
 
 
 /*********************************************** Category-Event*************************************************/ 
-else if(((checkedvalue=="morning") || (checkedvalue=="everyday")|| (checkedvalue=="Drop to school")  )&& (category.options[category.selectedIndex].value==1) ){
+else if(((checkedvalue.toLowerCase()=="morning") || (checkedvalue.toLowerCase()=="everyday")|| (checkedvalue.toLowerCase()=="Drop to school".toLowerCase())  )&& (category.options[category.selectedIndex].value==1) ){
     let enewLi = document.createElement("li");
     let eliTextNode = document.createTextNode(checkedvalue);
     enewLi.appendChild(eliTextNode);
@@ -723,7 +725,13 @@ function removerowobj(btndel) {
       $(btndel).closest("li").remove();
       $("#selectobj").find('option[value="' + listItemValue + '"]').remove();
      
-     
+      arrobj
+
+      var index = arrobj.indexOf(listItemValue);
+        if (index !== -1) {
+          arrobj.splice(index, 1);
+        }
+        console.log(arrobj);
 
   } else {
       return false;
