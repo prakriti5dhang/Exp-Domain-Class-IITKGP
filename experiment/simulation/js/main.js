@@ -725,7 +725,7 @@ function removerowobj(btndel) {
       $(btndel).closest("li").remove();
       $("#selectobj").find('option[value="' + listItemValue + '"]').remove();
      
-      arrobj
+     
 
       var index = arrobj.indexOf(listItemValue);
         if (index !== -1) {
