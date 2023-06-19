@@ -15,8 +15,8 @@ Follow are the steps to be followed in general to perform the experiments in **S
 #### **Experiment Specific Instructions**
 Following are the instructions specifically for this experiment:
 
-1. Identify a noun or noun phrase, and write it in the left textbox of **Table #1**. Click the adjacent **‘Add’** button to add this noun or noun phrase. Repeat this until all the nouns and noun phrases are taken from the problem statement.
-2. If you want to delete any noun phrase, you can do it from the left list of **Table #2**.
+1. Identify a noun or noun phrase, and write it in the  textbox of **Table #1**. Click the adjacent **‘Add’** button to add this noun or noun phrase. Repeat this until all the nouns and noun phrases are taken from the problem statement.
+2. If you want to delete any noun phrase, you can do it from the  list of **Table #2**.
 3. In **Table #2**, we will categorize the nouns which are taken as Potential objects in our solution.
 4. **’Tick’** the adjacent checkbox of a potential object in the left-list of **Table #2**. Select a category from the middle drop down list. Click the adjacent **‘Add’** button to group the object under the selected category. Repeat this until all the potential objects are properly categorized.
 5. All the potential objects under their selected category are shown in **Table #3**.
