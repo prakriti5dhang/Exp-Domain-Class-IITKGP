@@ -455,6 +455,7 @@ function addbtnt7() {
   //}
   // }
 
+  
 
 
   if (inpt3 == "") {
@@ -466,14 +467,15 @@ function addbtnt7() {
   }
 
   else {
+    var t8attid= "t8att8"+ inpt3;
+    var t8class="t8class"+inpt3;
     var t8tr = document.createElement('tr');
     t8tr.setAttribute("id", "t8class1");
     document.getElementById('tbodytbl8').appendChild(t8tr);
     var td1t8 = document.createElement('td');
-    td1t8.setAttribute("id", "t8class");
+    td1t8.setAttribute("id", t8class);
     var td2t8 = document.createElement("td");
-    td2t8.setAttribute("id", "t8att");
-    //td2.setAttribute("rowspan","4");
+    td2t8.setAttribute("id", t8attid);
     var tdval1 = document.createTextNode(inpt3);
 
     t8tr.appendChild(td1t8);
@@ -481,12 +483,11 @@ function addbtnt7() {
 
     td1t8.appendChild(tdval1);
 
-    //td2t8.append(array);
-    /*for (checkbox of checkedvaluet7) {  
-      td2t8.append(checkbox.value); 
-     }*/
+    
     var ult8 = document.createElement("ul");
-
+    var ulid="t8att"+ inpt3;
+    ult8.setAttribute("id", ulid);
+    var lit8;
     td2t8.appendChild(ult8);
 
     array.forEach((item) => {
@@ -494,51 +495,85 @@ function addbtnt7() {
       newIconbtn.setAttribute("src", "./images/remove.png");
       newIconbtn.setAttribute("onclick", "removerowobj(this)");
       newIconbtn.setAttribute("style", "cursor:pointer;");
-      var lit8 = document.createElement("li");
+      lit8 = document.createElement("li");
       lit8.innerText = item;
       lit8.appendChild(newIconbtn);
       ult8.appendChild(lit8);
     })
-    //ult8.appendChild(lit8);
-    //lit8.append(array);
-
+    document.getElementById("t8att8"+ inpt3).appendChild(ult8);
+    //document.getElementById("t8class"+inpt3).appendChild(tdval1);
     document.getElementById('tbodytbl8').appendChild(t8tr);
+
+/**************************************** Removes duplicate class and rows *********************************************/
+    function removeDuplicateCellValuesAndRows() {
+      var table = document.getElementById('tbl8');
+      var rows = table.rows;
+      var uniqueValues = new Set();
+      var duplicateRows = [];
+    
+      for (var i = 1; i < rows.length; i++) {
+        var row = rows[i];
+        var cells = row.cells;
+        var duplicateRow = true;
+    
+        for (var j = 0; j < cells.length; j++) {
+          var cell = cells[j];
+          var value = cell.textContent;
+    
+          if (uniqueValues.has(value)) {
+            duplicateRow = true;
+            break;
+          } else {
+            duplicateRow = false;
+            uniqueValues.add(value);
+          }
+        }
+    
+        if (duplicateRow) {
+          duplicateRows.push(row);
+        }
+      }
+    
+      for (var i = 0; i < duplicateRows.length; i++) {
+        var row = duplicateRows[i];
+        table.deleteRow(row.rowIndex);
+      }
+    }
+    
+    removeDuplicateCellValuesAndRows();
+    
+    
+
+
     document.getElementById("ftbl7").reset();
+     
+    
+/******* Adding Classes************/
+      var t10tr = document.createElement('tr');
 
+      var td1t10 = document.createElement('td');
 
-    var t10tr = document.createElement('tr');
+      var tdval10 = document.createTextNode(inpt3);
 
-    var td1t10 = document.createElement('td');
+      t10tr.appendChild(td1t10);
+      td1t10.appendChild(tdval10);
+      document.getElementById('tbody10class').appendChild(t10tr);
+    
 
-    var tdval10 = document.createTextNode(inpt3);
+  //}
 
-    t10tr.appendChild(td1t10);
-    td1t10.appendChild(tdval10);
-    document.getElementById('tbody10class').appendChild(t10tr);
   }
 
-
-  /*var newIconbtn = document.createElement("img");
-  newIconbtn.setAttribute("src","./images/remove.png");
-  newIconbtn.setAttribute("onclick", "removerowobj(this)");
-  newIconbtn.setAttribute("style","cursor:pointer;");
-  lit8.appendChild(newIconbtn);*/
-
-  //document.getElementById("inp3").value=" ";
+  
 
 
 }
-/*var table = document.getElementById("tbl10c");
-tabrowindex + 1;
-var row = table.insertRow(1);
-//for (var VAL of inpt3) 
-let cell0 = row.insertCell(0); 
-cell0.innerHTML = inpt3; */
+
+
+  
 
 
 
-
-//document.getElementById("tbody10class").appendChild(table);
 
 
 /******************************************************* Adding classes Top Level Class in table 10 ****************************************************8*/
